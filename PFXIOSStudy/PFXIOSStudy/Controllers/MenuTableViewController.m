@@ -1,18 +1,21 @@
 //
-//  TableViewController.m
+//  MenuTableViewController.m
 //  PFXIOSStudy
 //
-//  Created by PFXStudio on 2016. 4. 21..
+//  Created by succorer on 2016. 4. 22..
 //  Copyright © 2016년 PFXStudio. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "MenuTableViewController.h"
+#import "CoreDataTableViewController.h"
 
-@interface TableViewController ()
+@interface MenuTableViewController ()
+
+@property (strong, nonatomic) NSArray *studies;
 
 @end
 
-@implementation TableViewController
+@implementation MenuTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +25,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Study" ofType:@"plist"];
+    self.studies = [[NSArray alloc] initWithContentsOfFile:path];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +37,31 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [self.studies count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menuCell" forIndexPath:indexPath];
+    [cell.textLabel setText:self.studies[indexPath.row]];
     // Configure the cell...
     
     return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == MenuType_CoreData)
+    {
+        CoreDataTableViewController *coreDataTableViewController = [[StoryboardPerform sharedCoreDataStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([CoreDataTableViewController class])];
+        [self.navigationController pushViewController:coreDataTableViewController animated:YES];
+        
+        return;
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

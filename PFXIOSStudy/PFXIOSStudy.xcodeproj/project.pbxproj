@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		6DEEDFD31CC8F8BA00343239 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDFD21CC8F8BA00343239 /* main.m */; };
 		6DEEDFD61CC8F8BA00343239 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDFD51CC8F8BA00343239 /* AppDelegate.m */; };
-		6DEEDFDC1CC8F8BA00343239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DEEDFDA1CC8F8BA00343239 /* Main.storyboard */; };
-		6DEEDFDF1CC8F8BA00343239 /* PFXIOSStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDFDD1CC8F8BA00343239 /* PFXIOSStudy.xcdatamodeld */; };
-		6DEEDFE11CC8F8BA00343239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEEDFE01CC8F8BA00343239 /* Assets.xcassets */; };
-		6DEEDFE41CC8F8BA00343239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DEEDFE21CC8F8BA00343239 /* LaunchScreen.storyboard */; };
-		6DEEDFED1CC8F8E300343239 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDFEC1CC8F8E300343239 /* TableViewController.m */; };
-		6DEEDFEF1CC8F90800343239 /* Study.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DEEDFEE1CC8F90800343239 /* Study.plist */; };
+		D20A8F091CC9C85C00496121 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20A8F081CC9C85C00496121 /* CoreDataTableViewController.m */; };
+		D20A8F0C1CC9C87600496121 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20A8F0B1CC9C87600496121 /* MenuTableViewController.m */; };
+		D20A8F0F1CC9C93000496121 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20A8F0E1CC9C93000496121 /* Menu.storyboard */; };
+		D20A8F111CC9CA3800496121 /* CoreData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20A8F101CC9CA3800496121 /* CoreData.storyboard */; };
+		D20A8F151CC9CA5200496121 /* StoryboardPerform.m in Sources */ = {isa = PBXBuildFile; fileRef = D20A8F141CC9CA5200496121 /* StoryboardPerform.m */; };
+		D20A8F191CC9CA8500496121 /* Study.plist in Resources */ = {isa = PBXBuildFile; fileRef = D20A8F181CC9CA8500496121 /* Study.plist */; };
+		D20A8F1C1CC9CAB000496121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D20A8F1B1CC9CAB000496121 /* Assets.xcassets */; };
+		D20A8F201CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D20A8F1E1CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld */; };
+		D20A8F221CC9CB2D00496121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20A8F211CC9CB2D00496121 /* LaunchScreen.storyboard */; };
+		D20A8F2A1CC9D1FB00496121 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D20A8F291CC9D1FB00496121 /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,14 +26,24 @@
 		6DEEDFD21CC8F8BA00343239 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6DEEDFD41CC8F8BA00343239 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6DEEDFD51CC8F8BA00343239 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6DEEDFDB1CC8F8BA00343239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6DEEDFDE1CC8F8BA00343239 /* PFXIOSStudy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PFXIOSStudy.xcdatamodel; sourceTree = "<group>"; };
-		6DEEDFE01CC8F8BA00343239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6DEEDFE31CC8F8BA00343239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DEEDFE51CC8F8BA00343239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DEEDFEB1CC8F8E300343239 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		6DEEDFEC1CC8F8E300343239 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		6DEEDFEE1CC8F90800343239 /* Study.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Study.plist; sourceTree = "<group>"; };
+		D20A8F071CC9C85C00496121 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = Controllers/CoreDataTableViewController.h; sourceTree = "<group>"; };
+		D20A8F081CC9C85C00496121 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = Controllers/CoreDataTableViewController.m; sourceTree = "<group>"; };
+		D20A8F0A1CC9C87600496121 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewController.h; path = Controllers/MenuTableViewController.h; sourceTree = "<group>"; };
+		D20A8F0B1CC9C87600496121 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = Controllers/MenuTableViewController.m; sourceTree = "<group>"; };
+		D20A8F0E1CC9C93000496121 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Menu.storyboard; path = Storyboards/Menu.storyboard; sourceTree = "<group>"; };
+		D20A8F101CC9CA3800496121 /* CoreData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CoreData.storyboard; path = Storyboards/CoreData.storyboard; sourceTree = "<group>"; };
+		D20A8F131CC9CA5200496121 /* StoryboardPerform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryboardPerform.h; path = Performs/StoryboardPerform.h; sourceTree = "<group>"; };
+		D20A8F141CC9CA5200496121 /* StoryboardPerform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryboardPerform.m; path = Performs/StoryboardPerform.m; sourceTree = "<group>"; };
+		D20A8F181CC9CA8500496121 /* Study.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Study.plist; path = Resources/Files/Study.plist; sourceTree = "<group>"; };
+		D20A8F1B1CC9CAB000496121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D20A8F1F1CC9CAE900496121 /* PFXIOSStudy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PFXIOSStudy.xcdatamodel; sourceTree = "<group>"; };
+		D20A8F211CC9CB2D00496121 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D20A8F231CC9CB5900496121 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = "Supporting Files/PrefixHeader.pch"; sourceTree = "<group>"; };
+		D20A8F261CC9CC9200496121 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Enums.h; path = Commons/Enums.h; sourceTree = "<group>"; };
+		D20A8F281CC9D1FB00496121 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = Managers/CoreDataManager.h; sourceTree = "<group>"; };
+		D20A8F291CC9D1FB00496121 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = Managers/CoreDataManager.m; sourceTree = "<group>"; };
+		D20A8F2E1CC9D3CB00496121 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = Commons/Defines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +78,12 @@
 			children = (
 				6DEEDFD41CC8F8BA00343239 /* AppDelegate.h */,
 				6DEEDFD51CC8F8BA00343239 /* AppDelegate.m */,
-				6DEEDFE01CC8F8BA00343239 /* Assets.xcassets */,
-				6DEEDFE51CC8F8BA00343239 /* Info.plist */,
-				6DEEDFDD1CC8F8BA00343239 /* PFXIOSStudy.xcdatamodeld */,
-				6DEEDFEE1CC8F90800343239 /* Study.plist */,
-				6DEEDFEB1CC8F8E300343239 /* TableViewController.h */,
-				6DEEDFEC1CC8F8E300343239 /* TableViewController.m */,
-				6DEEDFDA1CC8F8BA00343239 /* Main.storyboard */,
-				6DEEDFE21CC8F8BA00343239 /* LaunchScreen.storyboard */,
+				D20A8F251CC9CC7C00496121 /* Commons */,
+				D20A8F061CC9C83B00496121 /* Controllers */,
+				D20A8F271CC9D1D300496121 /* Managers */,
+				D20A8F121CC9CA3C00496121 /* Performs */,
+				D20A8F161CC9CA6500496121 /* Resources */,
+				D20A8F0D1CC9C91300496121 /* StoryBoards */,
 				6DEEDFD11CC8F8BA00343239 /* Supporting Files */,
 			);
 			path = PFXIOSStudy;
@@ -80,9 +92,95 @@
 		6DEEDFD11CC8F8BA00343239 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6DEEDFE51CC8F8BA00343239 /* Info.plist */,
 				6DEEDFD21CC8F8BA00343239 /* main.m */,
+				D20A8F231CC9CB5900496121 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D20A8F061CC9C83B00496121 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D20A8F071CC9C85C00496121 /* CoreDataTableViewController.h */,
+				D20A8F081CC9C85C00496121 /* CoreDataTableViewController.m */,
+				D20A8F0A1CC9C87600496121 /* MenuTableViewController.h */,
+				D20A8F0B1CC9C87600496121 /* MenuTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D20A8F0D1CC9C91300496121 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				D20A8F101CC9CA3800496121 /* CoreData.storyboard */,
+				D20A8F211CC9CB2D00496121 /* LaunchScreen.storyboard */,
+				D20A8F0E1CC9C93000496121 /* Menu.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		D20A8F121CC9CA3C00496121 /* Performs */ = {
+			isa = PBXGroup;
+			children = (
+				D20A8F131CC9CA5200496121 /* StoryboardPerform.h */,
+				D20A8F141CC9CA5200496121 /* StoryboardPerform.m */,
+			);
+			name = Performs;
+			sourceTree = "<group>";
+		};
+		D20A8F161CC9CA6500496121 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D20A8F1D1CC9CAE900496121 /* DataModels */,
+				D20A8F171CC9CA6A00496121 /* Files */,
+				D20A8F1A1CC9CAB000496121 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D20A8F171CC9CA6A00496121 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				D20A8F181CC9CA8500496121 /* Study.plist */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		D20A8F1A1CC9CAB000496121 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D20A8F1B1CC9CAB000496121 /* Assets.xcassets */,
+			);
+			name = Images;
+			path = Resources/Images;
+			sourceTree = "<group>";
+		};
+		D20A8F1D1CC9CAE900496121 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				D20A8F1E1CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld */,
+			);
+			name = DataModels;
+			path = Resources/DataModels;
+			sourceTree = "<group>";
+		};
+		D20A8F251CC9CC7C00496121 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				D20A8F261CC9CC9200496121 /* Enums.h */,
+				D20A8F2E1CC9D3CB00496121 /* Defines.h */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
+		D20A8F271CC9D1D300496121 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D20A8F281CC9D1FB00496121 /* CoreDataManager.h */,
+				D20A8F291CC9D1FB00496121 /* CoreDataManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,10 +240,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DEEDFE41CC8F8BA00343239 /* LaunchScreen.storyboard in Resources */,
-				6DEEDFE11CC8F8BA00343239 /* Assets.xcassets in Resources */,
-				6DEEDFEF1CC8F90800343239 /* Study.plist in Resources */,
-				6DEEDFDC1CC8F8BA00343239 /* Main.storyboard in Resources */,
+				D20A8F191CC9CA8500496121 /* Study.plist in Resources */,
+				D20A8F111CC9CA3800496121 /* CoreData.storyboard in Resources */,
+				D20A8F0F1CC9C93000496121 /* Menu.storyboard in Resources */,
+				D20A8F221CC9CB2D00496121 /* LaunchScreen.storyboard in Resources */,
+				D20A8F1C1CC9CAB000496121 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,32 +256,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DEEDFD61CC8F8BA00343239 /* AppDelegate.m in Sources */,
-				6DEEDFDF1CC8F8BA00343239 /* PFXIOSStudy.xcdatamodeld in Sources */,
+				D20A8F2A1CC9D1FB00496121 /* CoreDataManager.m in Sources */,
 				6DEEDFD31CC8F8BA00343239 /* main.m in Sources */,
-				6DEEDFED1CC8F8E300343239 /* TableViewController.m in Sources */,
+				D20A8F201CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld in Sources */,
+				D20A8F091CC9C85C00496121 /* CoreDataTableViewController.m in Sources */,
+				D20A8F151CC9CA5200496121 /* StoryboardPerform.m in Sources */,
+				D20A8F0C1CC9C87600496121 /* MenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		6DEEDFDA1CC8F8BA00343239 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6DEEDFDB1CC8F8BA00343239 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6DEEDFE21CC8F8BA00343239 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6DEEDFE31CC8F8BA00343239 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6DEEDFE61CC8F8BA00343239 /* Debug */ = {
@@ -271,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "PFXIOSStudy/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = PFXIOSStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pfxstudio.PFXIOSStudy;
@@ -282,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "PFXIOSStudy/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = PFXIOSStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pfxstudio.PFXIOSStudy;
@@ -308,16 +393,17 @@
 				6DEEDFEA1CC8F8BA00343239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6DEEDFDD1CC8F8BA00343239 /* PFXIOSStudy.xcdatamodeld */ = {
+		D20A8F1E1CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6DEEDFDE1CC8F8BA00343239 /* PFXIOSStudy.xcdatamodel */,
+				D20A8F1F1CC9CAE900496121 /* PFXIOSStudy.xcdatamodel */,
 			);
-			currentVersion = 6DEEDFDE1CC8F8BA00343239 /* PFXIOSStudy.xcdatamodel */;
+			currentVersion = D20A8F1F1CC9CAE900496121 /* PFXIOSStudy.xcdatamodel */;
 			path = PFXIOSStudy.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
