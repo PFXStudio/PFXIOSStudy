@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DE61DDF1CCAEDE500C21880 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE61DDE1CCAEDE500C21880 /* Web.storyboard */; };
+		6DE61DE71CCAEFFC00C21880 /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61DE61CCAEFFC00C21880 /* CodeViewController.m */; };
+		6DE61DEC1CCAF41000C21880 /* CodeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61DEA1CCAF41000C21880 /* CodeMenuViewController.m */; };
+		6DE61DED1CCAF41000C21880 /* CodeMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE61DEB1CCAF41000C21880 /* CodeMenuViewController.xib */; };
 		6DEEDFD31CC8F8BA00343239 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDFD21CC8F8BA00343239 /* main.m */; };
 		6DEEDFD61CC8F8BA00343239 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDFD51CC8F8BA00343239 /* AppDelegate.m */; };
 		D20A8F091CC9C85C00496121 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20A8F081CC9C85C00496121 /* CoreDataTableViewController.m */; };
@@ -22,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6DE61DDE1CCAEDE500C21880 /* Web.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Web.storyboard; path = Storyboards/Web.storyboard; sourceTree = "<group>"; };
+		6DE61DE51CCAEFFC00C21880 /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodeViewController.h; path = Controllers/CodeViewController.h; sourceTree = "<group>"; };
+		6DE61DE61CCAEFFC00C21880 /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CodeViewController.m; path = Controllers/CodeViewController.m; sourceTree = "<group>"; };
+		6DE61DE91CCAF41000C21880 /* CodeMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodeMenuViewController.h; path = Xibs/CodeMenuViewController.h; sourceTree = "<group>"; };
+		6DE61DEA1CCAF41000C21880 /* CodeMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CodeMenuViewController.m; path = Xibs/CodeMenuViewController.m; sourceTree = "<group>"; };
+		6DE61DEB1CCAF41000C21880 /* CodeMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CodeMenuViewController.xib; path = Xibs/CodeMenuViewController.xib; sourceTree = "<group>"; };
 		6DEEDFCE1CC8F8BA00343239 /* PFXIOSStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PFXIOSStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEEDFD21CC8F8BA00343239 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6DEEDFD41CC8F8BA00343239 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6DE61DE01CCAEF0F00C21880 /* Thirds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Thirds;
+			sourceTree = "<group>";
+		};
+		6DE61DE81CCAF3F100C21880 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				6DE61DE91CCAF41000C21880 /* CodeMenuViewController.h */,
+				6DE61DEA1CCAF41000C21880 /* CodeMenuViewController.m */,
+				6DE61DEB1CCAF41000C21880 /* CodeMenuViewController.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
 		6DEEDFC51CC8F8BA00343239 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +112,8 @@
 				D20A8F161CC9CA6500496121 /* Resources */,
 				D20A8F0D1CC9C91300496121 /* StoryBoards */,
 				6DEEDFD11CC8F8BA00343239 /* Supporting Files */,
+				6DE61DE01CCAEF0F00C21880 /* Thirds */,
+				6DE61DE81CCAF3F100C21880 /* Xibs */,
 			);
 			path = PFXIOSStudy;
 			sourceTree = "<group>";
@@ -106,6 +135,8 @@
 				D20A8F081CC9C85C00496121 /* CoreDataTableViewController.m */,
 				D20A8F0A1CC9C87600496121 /* MenuTableViewController.h */,
 				D20A8F0B1CC9C87600496121 /* MenuTableViewController.m */,
+				6DE61DE51CCAEFFC00C21880 /* CodeViewController.h */,
+				6DE61DE61CCAEFFC00C21880 /* CodeViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -116,6 +147,7 @@
 				D20A8F101CC9CA3800496121 /* CoreData.storyboard */,
 				D20A8F211CC9CB2D00496121 /* LaunchScreen.storyboard */,
 				D20A8F0E1CC9C93000496121 /* Menu.storyboard */,
+				6DE61DDE1CCAEDE500C21880 /* Web.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -245,6 +277,8 @@
 				D20A8F0F1CC9C93000496121 /* Menu.storyboard in Resources */,
 				D20A8F221CC9CB2D00496121 /* LaunchScreen.storyboard in Resources */,
 				D20A8F1C1CC9CAB000496121 /* Assets.xcassets in Resources */,
+				6DE61DDF1CCAEDE500C21880 /* Web.storyboard in Resources */,
+				6DE61DED1CCAF41000C21880 /* CodeMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +292,8 @@
 				6DEEDFD61CC8F8BA00343239 /* AppDelegate.m in Sources */,
 				D20A8F2A1CC9D1FB00496121 /* CoreDataManager.m in Sources */,
 				6DEEDFD31CC8F8BA00343239 /* main.m in Sources */,
+				6DE61DE71CCAEFFC00C21880 /* CodeViewController.m in Sources */,
+				6DE61DEC1CCAF41000C21880 /* CodeMenuViewController.m in Sources */,
 				D20A8F201CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld in Sources */,
 				D20A8F091CC9C85C00496121 /* CoreDataTableViewController.m in Sources */,
 				D20A8F151CC9CA5200496121 /* StoryboardPerform.m in Sources */,

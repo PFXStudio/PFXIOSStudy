@@ -9,6 +9,6 @@
 #ifndef Defines_h
 #define Defines_h
 
-
+#define kRootDomain @"https://github.com/PFXStudio/PFXIOSStudy/blob/master/PFXIOSStudy/PFXIOSStudy"
 
 #endif /* Defines_h */

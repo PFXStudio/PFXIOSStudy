@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="quj-Vv-SnS">
+            <objects>
+                <navigationController id="UZh-co-anq" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dts-O3-qDO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GLI-sW-yWW" kind="relationship" relationship="rootViewController" id="CK7-ga-gYT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6I-D1-KiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="171" y="587"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="vzR-ql-rz7">
+            <objects>
+                <viewController storyboardIdentifier="CodeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GLI-sW-yWW" customClass="CodeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ydo-44-kgY"/>
+                        <viewControllerLayoutGuide type="bottom" id="aGV-XB-6ig"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JZ1-gl-YIk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bT-Bz-TnT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7bT-Bz-TnT" firstAttribute="leading" secondItem="JZ1-gl-YIk" secondAttribute="leading" id="0nI-Ag-s9o"/>
+                            <constraint firstAttribute="trailing" secondItem="7bT-Bz-TnT" secondAttribute="trailing" id="IGE-58-YfI"/>
+                            <constraint firstItem="aGV-XB-6ig" firstAttribute="top" secondItem="7bT-Bz-TnT" secondAttribute="bottom" id="L0o-DP-dUg"/>
+                            <constraint firstItem="7bT-Bz-TnT" firstAttribute="top" secondItem="JZ1-gl-YIk" secondAttribute="top" id="hom-Bw-6Uq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e2D-TE-gv2"/>
+                    <connections>
+                        <outlet property="webView" destination="7bT-Bz-TnT" id="x5T-sd-o8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbM-dB-m2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610.5" y="586.5"/>
+        </scene>
+    </scenes>
+</document>
