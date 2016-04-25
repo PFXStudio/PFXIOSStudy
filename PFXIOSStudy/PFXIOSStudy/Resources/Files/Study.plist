@@ -4,5 +4,12 @@
 <array>
 	<string>CoreData</string>
 	<string>ContainerView</string>
+	<string>Block</string>
+	<string>Dispatch</string>
+	<string>DesignPattern</string>
+	<string>Network</string>
+	<string>Serialize</string>
+	<string>Fabric SDK</string>
+	<string>Parse SDK</string>
 </array>
 </plist>

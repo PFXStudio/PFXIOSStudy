@@ -13,10 +13,8 @@
 @interface ContainerViewController ()
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-
-@property (weak, nonatomic) SwapViewController *swapViewController;
-
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) SwapViewController *swapViewController;
 
 @end
 
