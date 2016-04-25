@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, MenuType)
     MenuType_CoreData,
     MenuType_ContainerView,
     MenuType_Block,
+    MenuType_Dispatch,
     
     MenuType_Max,
 };
@@ -25,5 +26,14 @@ typedef NS_ENUM(NSInteger, CoreDataTableSectionType)
     
     CoreDataTableSectionType_Max,
 };
+
+typedef NS_ENUM(NSInteger, ErrorType)
+{
+    ErrorType_FilePath = -80000,
+    ErrorType_AppStoreVersion,
+    
+    ErrorType_Max,
+};
+
 
 #endif /* Enums_h */

@@ -10,6 +10,7 @@
 #import "CoreDataTableViewController.h"
 #import "ContainerViewController.h"
 #import "BlockViewController.h"
+#import "DispatchViewController.h"
 
 @interface MenuTableViewController ()
 
@@ -77,6 +78,14 @@
     {
         BlockViewController *blockViewController = [[StoryboardPerform sharedBlockStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([BlockViewController class])];
         [self.navigationController pushViewController:blockViewController animated:YES];
+        
+        return;
+    }
+    
+    if (indexPath.row == MenuType_Dispatch)
+    {
+        DispatchViewController *dispatchViewController = [[StoryboardPerform sharedDispatchStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([DispatchViewController class])];
+        [self.navigationController pushViewController:dispatchViewController animated:YES];
         
         return;
     }

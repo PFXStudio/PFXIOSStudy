@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
+@property (strong, nonatomic) void(^completionBlock)(NSString *appStoreVersion, NSError *error);
 
 @end
 
@@ -62,6 +63,7 @@
 
 - (void)requestWithCompletion:(void(^)(NSString *appStoreVersion, NSError *error))completion
 {
+    self.completionBlock = completion;
     dispatch_async(dispatch_get_main_queue(), ^{
         NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/lookup?bundleId=com.pfxstudio.HoneyRoom"]];
         NSData* data = [NSData dataWithContentsOfURL:url];
@@ -76,7 +78,16 @@
             }
             
             completion(appStoreVersion, nil);
+            return;
         }
+        
+        if (completion == nil)
+        {
+            return;
+        }
+        
+        NSError *error = [NSError errorWithDomain:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__] code:ErrorType_AppStoreVersion userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"ErrorType_AppStoreVersion", @"errorType", nil]];
+        completion(nil, error);
     });
 }
 
