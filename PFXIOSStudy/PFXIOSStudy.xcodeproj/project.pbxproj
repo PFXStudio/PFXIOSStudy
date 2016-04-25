@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4E36F21CCE354C009FD201 /* Block.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4E36F11CCE354C009FD201 /* Block.storyboard */; };
+		6D4E36F51CCE3595009FD201 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4E36F41CCE3595009FD201 /* BlockViewController.m */; };
 		6DE61DDF1CCAEDE500C21880 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE61DDE1CCAEDE500C21880 /* Web.storyboard */; };
 		6DE61DE71CCAEFFC00C21880 /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61DE61CCAEFFC00C21880 /* CodeViewController.m */; };
 		6DE61DEC1CCAF41000C21880 /* CodeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61DEA1CCAF41000C21880 /* CodeMenuViewController.m */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D4E36F11CCE354C009FD201 /* Block.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Block.storyboard; path = Storyboards/Block.storyboard; sourceTree = "<group>"; };
+		6D4E36F31CCE3595009FD201 /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlockViewController.h; path = Controllers/BlockViewController.h; sourceTree = "<group>"; };
+		6D4E36F41CCE3595009FD201 /* BlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlockViewController.m; path = Controllers/BlockViewController.m; sourceTree = "<group>"; };
 		6DE61DDE1CCAEDE500C21880 /* Web.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Web.storyboard; path = Storyboards/Web.storyboard; sourceTree = "<group>"; };
 		6DE61DE51CCAEFFC00C21880 /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodeViewController.h; path = Controllers/CodeViewController.h; sourceTree = "<group>"; };
 		6DE61DE61CCAEFFC00C21880 /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CodeViewController.m; path = Controllers/CodeViewController.m; sourceTree = "<group>"; };
@@ -152,6 +157,8 @@
 				D26708451CCDC7BE003253EA /* ContainerViewController.m */,
 				D26708471CCDC817003253EA /* SwapViewController.h */,
 				D26708481CCDC817003253EA /* SwapViewController.m */,
+				6D4E36F31CCE3595009FD201 /* BlockViewController.h */,
+				6D4E36F41CCE3595009FD201 /* BlockViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -159,11 +166,12 @@
 		D20A8F0D1CC9C91300496121 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				6D4E36F11CCE354C009FD201 /* Block.storyboard */,
+				D26708411CCDC426003253EA /* Container.storyboard */,
 				D20A8F101CC9CA3800496121 /* CoreData.storyboard */,
 				D20A8F211CC9CB2D00496121 /* LaunchScreen.storyboard */,
 				D20A8F0E1CC9C93000496121 /* Menu.storyboard */,
 				6DE61DDE1CCAEDE500C21880 /* Web.storyboard */,
-				D26708411CCDC426003253EA /* Container.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -293,6 +301,7 @@
 				D20A8F191CC9CA8500496121 /* Study.plist in Resources */,
 				D20A8F111CC9CA3800496121 /* CoreData.storyboard in Resources */,
 				D20A8F0F1CC9C93000496121 /* Menu.storyboard in Resources */,
+				6D4E36F21CCE354C009FD201 /* Block.storyboard in Resources */,
 				D20A8F221CC9CB2D00496121 /* LaunchScreen.storyboard in Resources */,
 				D20A8F1C1CC9CAB000496121 /* Assets.xcassets in Resources */,
 				6DE61DDF1CCAEDE500C21880 /* Web.storyboard in Resources */,
@@ -312,6 +321,7 @@
 				D20A8F2A1CC9D1FB00496121 /* CoreDataManager.m in Sources */,
 				6DEEDFD31CC8F8BA00343239 /* main.m in Sources */,
 				D26708621CCE0950003253EA /* EmptySegue.m in Sources */,
+				6D4E36F51CCE3595009FD201 /* BlockViewController.m in Sources */,
 				6DE61DE71CCAEFFC00C21880 /* CodeViewController.m in Sources */,
 				D26708461CCDC7BE003253EA /* ContainerViewController.m in Sources */,
 				6DE61DEC1CCAF41000C21880 /* CodeMenuViewController.m in Sources */,

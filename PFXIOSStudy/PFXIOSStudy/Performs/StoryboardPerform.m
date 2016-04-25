@@ -34,4 +34,10 @@
     return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
 }
 
++ (UIStoryboard *)sharedBlockStoryBoard
+{
+    NSString * storyboardName = @"Block";
+    return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+}
+
 @end

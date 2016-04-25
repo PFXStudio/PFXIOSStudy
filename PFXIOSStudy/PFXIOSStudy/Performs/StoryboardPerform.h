@@ -14,5 +14,6 @@
 + (UIStoryboard *)sharedMenuStoryBoard;
 + (UIStoryboard *)sharedWebStoryBoard;
 + (UIStoryboard *)sharedContainerStoryBoard;
++ (UIStoryboard *)sharedBlockStoryBoard;
 
 @end

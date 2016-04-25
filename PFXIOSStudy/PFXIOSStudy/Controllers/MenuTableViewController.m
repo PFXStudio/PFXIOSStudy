@@ -9,6 +9,7 @@
 #import "MenuTableViewController.h"
 #import "CoreDataTableViewController.h"
 #import "ContainerViewController.h"
+#import "BlockViewController.h"
 
 @interface MenuTableViewController ()
 
@@ -55,6 +56,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == MenuType_CoreData)
     {
         CoreDataTableViewController *coreDataTableViewController = [[StoryboardPerform sharedCoreDataStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([CoreDataTableViewController class])];
@@ -71,6 +73,14 @@
         return;
     }
 
+    if (indexPath.row == MenuType_Block)
+    {
+        BlockViewController *blockViewController = [[StoryboardPerform sharedBlockStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([BlockViewController class])];
+        [self.navigationController pushViewController:blockViewController animated:YES];
+        
+        return;
+    }
+    
 }
 
 /*
