@@ -3,6 +3,6 @@
 <plist version="1.0">
 <array>
 	<string>CoreData</string>
-	<string>Animation</string>
+	<string>ContainerView</string>
 </array>
 </plist>

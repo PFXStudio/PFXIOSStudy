@@ -11,10 +11,12 @@
 #import "CodeViewController.h"
 #import "CodeMenuViewController.h"
 
-@interface CoreDataTableViewController () <NSFetchedResultsControllerDelegate>
+@interface CoreDataTableViewController () <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSString *entityName;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -30,47 +32,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self initialize];
 
-//    CodeMenuViewController *codeMenuViewController = [[CodeMenuViewController alloc] initWithNibName:NSStringFromClass([CodeMenuViewController class]) bundle:[NSBundle mainBundle]];
-//    
-//    codeMenuViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
-//    [self addChildViewController:codeMenuViewController];
-//    [self.view addSubview:codeMenuViewController.view];
-//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:codeMenuViewController.view attribute:NSLayoutAttributeLeading
-//                                                                   relatedBy:NSLayoutRelationEqual
-//                                                                      toItem:self.view
-//                                                                   attribute:NSLayoutAttributeLeading
-//                                                                  multiplier:1.0
-//                                                                    constant:0]];
-//    
-//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:codeMenuViewController.view attribute:NSLayoutAttributeTrailing
-//                                                                   relatedBy:NSLayoutRelationEqual
-//                                                                      toItem:self.view
-//                                                                   attribute:NSLayoutAttributeTrailing
-//                                                                  multiplier:1.0
-//                                                                    constant:0]];
-//    
-//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:codeMenuViewController.view attribute:NSLayoutAttributeBottom
-//                                                                   relatedBy:NSLayoutRelationEqual
-//                                                                      toItem:self.view
-//                                                                   attribute:NSLayoutAttributeBottom
-//                                                                  multiplier:1.0
-//                                                                    constant:0]];
-//    
-//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:codeMenuViewController.view
-//                                                     attribute:NSLayoutAttributeHeight
-//                                                     relatedBy:NSLayoutRelationEqual
-//                                                        toItem:nil
-//                                                     attribute:NSLayoutAttributeNotAnAttribute 
-//                                                    multiplier:1.0 
-//                                                      constant:120]];
-
-//    [codeMenuViewController.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeHeight
-//                                                                            relatedBy:NSLayoutRelationEqual
-//                                                                               toItem:codeMenuViewController.view
-//                                                                            attribute:NSLayoutAttributeHeight
-//                                                                           multiplier:1.0
-//                                                                             constant:44]];
-    
+    CodeMenuViewController *codeMenuViewController = [[CodeMenuViewController alloc] initWithNibName:NSStringFromClass([CodeMenuViewController class]) bundle:[NSBundle mainBundle]];
+    [codeMenuViewController initWithSender:self.navigationController parentView:self.containerView path:@"Controllers/CoreDataTableViewController.m"];
+    [self addChildViewController:codeMenuViewController];
 }
 
 - (void)initialize
@@ -121,9 +85,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section != CoreDataTableSectionType_Add)
     {
-        CodeViewController *codeViewController = [[StoryboardPerform sharedWebStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([CodeViewController class])];
-        codeViewController.path = [kRootDomain stringByAppendingPathComponent:@"Controllers/CoreDataTableViewController.m"];
-        [self.navigationController pushViewController:codeViewController animated:YES];
         return;
     }
     

@@ -13,5 +13,6 @@
 + (UIStoryboard *)sharedCoreDataStoryBoard;
 + (UIStoryboard *)sharedMenuStoryBoard;
 + (UIStoryboard *)sharedWebStoryBoard;
++ (UIStoryboard *)sharedContainerStoryBoard;
 
 @end

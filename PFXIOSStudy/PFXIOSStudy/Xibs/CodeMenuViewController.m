@@ -18,10 +18,42 @@
 
 @implementation CodeMenuViewController
 
-- (void)initWithSender:(id)sender path:(NSString *)path
+- (void)initWithSender:(id)sender parentView:(UIView *)parentView path:(NSString *)path
 {
     self.sender = sender;
     self.path = [kRootDomain stringByAppendingPathComponent:path];
+    
+    self.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [parentView addSubview:self.view];
+    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeLeading
+                                                                   relatedBy:NSLayoutRelationEqual
+                                                                      toItem:parentView
+                                                                   attribute:NSLayoutAttributeLeading
+                                                                  multiplier:1.0
+                                                                    constant:0]];
+    
+    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTrailing
+                                                                   relatedBy:NSLayoutRelationEqual
+                                                                      toItem:parentView
+                                                                   attribute:NSLayoutAttributeTrailing
+                                                                  multiplier:1.0
+                                                                    constant:0]];
+    
+    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeBottom
+                                                                   relatedBy:NSLayoutRelationEqual
+                                                                      toItem:parentView
+                                                                   attribute:NSLayoutAttributeBottom
+                                                                  multiplier:1.0
+                                                                    constant:0]];
+    
+    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTop
+                                                                   relatedBy:NSLayoutRelationEqual
+                                                                      toItem:parentView
+                                                                   attribute:NSLayoutAttributeTop
+                                                                  multiplier:1.0
+                                                                    constant:0]];
+    
+    
 }
 
 - (void)viewDidLoad {
@@ -45,14 +77,22 @@
 */
 
 - (IBAction)touchedCodeViewButton:(id)sender {
-    if ([self.sender isKindOfClass:[UIViewController class]] == YES)
+    if ([self.sender isKindOfClass:[UINavigationController class]] == YES)
     {
+        UINavigationController *navigationController = (UINavigationController *)self.sender;
+        CodeViewController *codeViewController = [[StoryboardPerform sharedWebStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([CodeViewController class])];
+        codeViewController.path = self.path;
+        codeViewController.navigationController.navigationItem.leftBarButtonItem = nil;
+        [navigationController pushViewController:codeViewController animated:YES];
         return;
     }
-    
-    UINavigationController *navigationController = (UINavigationController *)self.sender;
-    CodeViewController *codeViewController = [[StoryboardPerform sharedWebStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([CodeViewController class])];
-    [navigationController pushViewController:codeViewController animated:YES];
+
+    if ([self.sender isKindOfClass:[UIViewController class]] == YES)
+    {
+        UINavigationController *navigationController = [[StoryboardPerform sharedWebStoryBoard] instantiateViewControllerWithIdentifier:@"CodeNavigationController"];
+        [sender presentViewController:navigationController animated:YES completion:nil];
+        return;
+    }
 }
 
 @end

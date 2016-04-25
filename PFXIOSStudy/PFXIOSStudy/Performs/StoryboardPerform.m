@@ -28,4 +28,10 @@
     return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
 }
 
++ (UIStoryboard *)sharedContainerStoryBoard
+{
+    NSString * storyboardName = @"Container";
+    return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+}
+
 @end

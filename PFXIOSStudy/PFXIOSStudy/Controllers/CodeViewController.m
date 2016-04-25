@@ -8,9 +8,10 @@
 
 #import "CodeViewController.h"
 
-@interface CodeViewController ()
+@interface CodeViewController () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
 
 @end
 
@@ -37,5 +38,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [self.indicatorView startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.indicatorView stopAnimating];
+}
 
 @end

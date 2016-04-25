@@ -8,6 +8,7 @@
 
 #import "MenuTableViewController.h"
 #import "CoreDataTableViewController.h"
+#import "ContainerViewController.h"
 
 @interface MenuTableViewController ()
 
@@ -61,6 +62,15 @@
         
         return;
     }
+
+    if (indexPath.row == MenuType_ContainerView)
+    {
+        ContainerViewController *containerViewController = [[StoryboardPerform sharedContainerStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([ContainerViewController class])];
+        [self.navigationController pushViewController:containerViewController animated:YES];
+        
+        return;
+    }
+
 }
 
 /*

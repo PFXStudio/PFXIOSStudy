@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="quj-Vv-SnS">
             <objects>
-                <navigationController id="UZh-co-anq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CodeNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UZh-co-anq" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dts-O3-qDO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -37,18 +37,27 @@
                             <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bT-Bz-TnT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GLI-sW-yWW" id="Umv-mZ-Ftz"/>
+                                </connections>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5xq-nL-PuF">
+                                <rect key="frame" x="177" y="324" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7bT-Bz-TnT" firstAttribute="leading" secondItem="JZ1-gl-YIk" secondAttribute="leading" id="0nI-Ag-s9o"/>
+                            <constraint firstItem="5xq-nL-PuF" firstAttribute="centerX" secondItem="JZ1-gl-YIk" secondAttribute="centerX" id="1VZ-z9-Pfw"/>
                             <constraint firstAttribute="trailing" secondItem="7bT-Bz-TnT" secondAttribute="trailing" id="IGE-58-YfI"/>
                             <constraint firstItem="aGV-XB-6ig" firstAttribute="top" secondItem="7bT-Bz-TnT" secondAttribute="bottom" id="L0o-DP-dUg"/>
+                            <constraint firstItem="5xq-nL-PuF" firstAttribute="centerY" secondItem="JZ1-gl-YIk" secondAttribute="centerY" id="Lmu-Sm-iQO"/>
                             <constraint firstItem="7bT-Bz-TnT" firstAttribute="top" secondItem="JZ1-gl-YIk" secondAttribute="top" id="hom-Bw-6Uq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e2D-TE-gv2"/>
                     <connections>
+                        <outlet property="indicatorView" destination="5xq-nL-PuF" id="hg9-9L-9R9"/>
                         <outlet property="webView" destination="7bT-Bz-TnT" id="x5T-sd-o8U"/>
                     </connections>
                 </viewController>
