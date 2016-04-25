@@ -26,6 +26,7 @@
 		D26708421CCDC426003253EA /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26708411CCDC426003253EA /* Container.storyboard */; };
 		D26708461CCDC7BE003253EA /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708451CCDC7BE003253EA /* ContainerViewController.m */; };
 		D26708491CCDC817003253EA /* SwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708481CCDC817003253EA /* SwapViewController.m */; };
+		D26708621CCE0950003253EA /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708611CCE0950003253EA /* EmptySegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		D26708451CCDC7BE003253EA /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContainerViewController.m; path = Controllers/ContainerViewController.m; sourceTree = "<group>"; };
 		D26708471CCDC817003253EA /* SwapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwapViewController.h; path = Controllers/SwapViewController.h; sourceTree = "<group>"; };
 		D26708481CCDC817003253EA /* SwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwapViewController.m; path = Controllers/SwapViewController.m; sourceTree = "<group>"; };
+		D26708601CCE0950003253EA /* EmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmptySegue.h; path = Commons/EmptySegue.h; sourceTree = "<group>"; };
+		D26708611CCE0950003253EA /* EmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptySegue.m; path = Commons/EmptySegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,8 +216,10 @@
 		D20A8F251CC9CC7C00496121 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				D20A8F261CC9CC9200496121 /* Enums.h */,
 				D20A8F2E1CC9D3CB00496121 /* Defines.h */,
+				D26708601CCE0950003253EA /* EmptySegue.h */,
+				D26708611CCE0950003253EA /* EmptySegue.m */,
+				D20A8F261CC9CC9200496121 /* Enums.h */,
 			);
 			name = Commons;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				6DEEDFD61CC8F8BA00343239 /* AppDelegate.m in Sources */,
 				D20A8F2A1CC9D1FB00496121 /* CoreDataManager.m in Sources */,
 				6DEEDFD31CC8F8BA00343239 /* main.m in Sources */,
+				D26708621CCE0950003253EA /* EmptySegue.m in Sources */,
 				6DE61DE71CCAEFFC00C21880 /* CodeViewController.m in Sources */,
 				D26708461CCDC7BE003253EA /* ContainerViewController.m in Sources */,
 				6DE61DEC1CCAF41000C21880 /* CodeMenuViewController.m in Sources */,

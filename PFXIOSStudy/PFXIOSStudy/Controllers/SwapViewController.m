@@ -25,7 +25,6 @@
     
     self.currentSegueIdentifier = kFirstIdentifier;
     [self performSegueWithIdentifier:self.currentSegueIdentifier sender:nil];
-#error TODO : Swap
 }
 
 - (void)didReceiveMemoryWarning {

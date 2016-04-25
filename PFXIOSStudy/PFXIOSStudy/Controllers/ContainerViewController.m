@@ -8,12 +8,15 @@
 
 #import "ContainerViewController.h"
 #import "SwapViewController.h"
+#import "CodeMenuViewController.h"
 
 @interface ContainerViewController ()
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @property (weak, nonatomic) SwapViewController *swapViewController;
+
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
 
@@ -22,6 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    CodeMenuViewController *codeMenuViewController = [[CodeMenuViewController alloc] initWithNibName:NSStringFromClass([CodeMenuViewController class]) bundle:[NSBundle mainBundle]];
+    [codeMenuViewController initWithSender:self.navigationController parentView:self.containerView path:@"Controllers/SwapViewController.m"];
+    [self addChildViewController:codeMenuViewController];
 }
 
 - (void)didReceiveMemoryWarning {
