@@ -7,8 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ProxyInterface.h"
+#import "ActionInterface.h"
+#import "StatusInterface.h"
 
-@interface Monster : NSObject <ProxyInterface>
+@interface Monster : NSObject <ActionInterface>
+
+@property (strong, nonatomic) id<StatusInterface> status;
+
+- (NSInteger)attackDamage;
+- (void)jump;
+- (void)run;
 
 @end

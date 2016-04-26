@@ -1,5 +1,5 @@
 //
-//  ProxyInterface.h
+//  StatusInterface.h
 //  PFXIOSStudy
 //
 //  Created by succorer on 2016. 4. 26..
@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ProxyInterface <NSObject>
+@class Monster;
+@protocol StatusInterface <NSObject>
 
-- (void)attack;
-- (void)defence;
+- (void)jumpWithMonster:(Monster *)monster;
+- (void)runWithMonster:(Monster *)monster;
 
 @end
+

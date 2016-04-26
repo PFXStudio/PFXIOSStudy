@@ -13,11 +13,27 @@
 - (void)attack
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%ld", [self attackDamage]);
 }
 
 - (void)defence
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+- (NSInteger)attackDamage
+{
+    return 0;
+}
+
+- (void)jump
+{
+    [self.status jumpWithMonster:self];
+}
+
+- (void)run
+{
+    [self.status runWithMonster:self];
 }
 
 @end

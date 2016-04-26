@@ -1,5 +1,5 @@
 //
-//  Proxy.h
+//  KnightMonster.h
 //  PFXIOSStudy
 //
 //  Created by succorer on 2016. 4. 26..
@@ -7,11 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ActionInterface.h"
+#import "Monster.h"
 
-@class Monster;
-@interface Proxy : NSObject <ActionInterface>
-
-- (instancetype)initWithMonster:(Monster *)monster;
+@interface KnightMonster : Monster
 
 @end

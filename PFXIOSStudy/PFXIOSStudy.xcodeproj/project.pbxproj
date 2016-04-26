@@ -40,6 +40,11 @@
 		D2EDC77B1CCF1BC80091E435 /* PlayerBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC77A1CCF1BC80091E435 /* PlayerBuilder.m */; };
 		D2EDC77E1CCF1BD40091E435 /* MonsterBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC77D1CCF1BD40091E435 /* MonsterBuilder.m */; };
 		D2EDC7811CCF1C770091E435 /* Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7801CCF1C770091E435 /* Builder.m */; };
+		D2EDC7A41CCF5C430091E435 /* ArcherMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7A31CCF5C430091E435 /* ArcherMonster.m */; };
+		D2EDC7A71CCF5C5A0091E435 /* KnightMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7A61CCF5C5A0091E435 /* KnightMonster.m */; };
+		D2EDC7AD1CCF5E510091E435 /* IdleStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7AC1CCF5E510091E435 /* IdleStatus.m */; };
+		D2EDC7B31CCF5FB50091E435 /* JumpStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7B21CCF5FB50091E435 /* JumpStatus.m */; };
+		D2EDC7B61CCF5FC20091E435 /* RunStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7B51CCF5FC20091E435 /* RunStatus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +108,6 @@
 		D2EDC7671CCF129B0091E435 /* Prototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Prototype.m; path = DesignPatterns/Prototype.m; sourceTree = "<group>"; };
 		D2EDC7691CCF15800091E435 /* Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Proxy.h; path = DesignPatterns/Proxy.h; sourceTree = "<group>"; };
 		D2EDC76A1CCF15800091E435 /* Proxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Proxy.m; path = DesignPatterns/Proxy.m; sourceTree = "<group>"; };
-		D2EDC76C1CCF15C00091E435 /* ProxyInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProxyInterface.h; path = DesignPatterns/ProxyInterface.h; sourceTree = "<group>"; };
 		D2EDC76F1CCF16670091E435 /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Monster.h; path = DesignPatterns/Monster.h; sourceTree = "<group>"; };
 		D2EDC7701CCF16670091E435 /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Monster.m; path = DesignPatterns/Monster.m; sourceTree = "<group>"; };
 		D2EDC7721CCF180B0091E435 /* Facade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Facade.h; path = DesignPatterns/Facade.h; sourceTree = "<group>"; };
@@ -115,6 +119,18 @@
 		D2EDC77D1CCF1BD40091E435 /* MonsterBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MonsterBuilder.m; path = DesignPatterns/MonsterBuilder.m; sourceTree = "<group>"; };
 		D2EDC77F1CCF1C770091E435 /* Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Builder.h; path = DesignPatterns/Builder.h; sourceTree = "<group>"; };
 		D2EDC7801CCF1C770091E435 /* Builder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Builder.m; path = DesignPatterns/Builder.m; sourceTree = "<group>"; };
+		D2EDC7A11CCF58EB0091E435 /* ActionInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionInterface.h; path = DesignPatterns/ActionInterface.h; sourceTree = "<group>"; };
+		D2EDC7A21CCF5C430091E435 /* ArcherMonster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcherMonster.h; path = DesignPatterns/ArcherMonster.h; sourceTree = "<group>"; };
+		D2EDC7A31CCF5C430091E435 /* ArcherMonster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArcherMonster.m; path = DesignPatterns/ArcherMonster.m; sourceTree = "<group>"; };
+		D2EDC7A51CCF5C5A0091E435 /* KnightMonster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KnightMonster.h; path = DesignPatterns/KnightMonster.h; sourceTree = "<group>"; };
+		D2EDC7A61CCF5C5A0091E435 /* KnightMonster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KnightMonster.m; path = DesignPatterns/KnightMonster.m; sourceTree = "<group>"; };
+		D2EDC7A81CCF5E0E0091E435 /* StatusInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusInterface.h; path = DesignPatterns/StatusInterface.h; sourceTree = "<group>"; };
+		D2EDC7AB1CCF5E510091E435 /* IdleStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IdleStatus.h; path = DesignPatterns/IdleStatus.h; sourceTree = "<group>"; };
+		D2EDC7AC1CCF5E510091E435 /* IdleStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IdleStatus.m; path = DesignPatterns/IdleStatus.m; sourceTree = "<group>"; };
+		D2EDC7B11CCF5FB50091E435 /* JumpStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JumpStatus.h; path = DesignPatterns/JumpStatus.h; sourceTree = "<group>"; };
+		D2EDC7B21CCF5FB50091E435 /* JumpStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JumpStatus.m; path = DesignPatterns/JumpStatus.m; sourceTree = "<group>"; };
+		D2EDC7B41CCF5FC20091E435 /* RunStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunStatus.h; path = DesignPatterns/RunStatus.h; sourceTree = "<group>"; };
+		D2EDC7B51CCF5FC20091E435 /* RunStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunStatus.m; path = DesignPatterns/RunStatus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,15 +327,19 @@
 		D2EDC7621CCF11670091E435 /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				D2EDC7A11CCF58EB0091E435 /* ActionInterface.h */,
 				D2EDC7631CCF11860091E435 /* Singleton.h */,
 				D2EDC7641CCF11860091E435 /* Singleton.m */,
 				D2EDC7661CCF129B0091E435 /* Prototype.h */,
 				D2EDC7671CCF129B0091E435 /* Prototype.m */,
 				D2EDC7691CCF15800091E435 /* Proxy.h */,
 				D2EDC76A1CCF15800091E435 /* Proxy.m */,
-				D2EDC76C1CCF15C00091E435 /* ProxyInterface.h */,
 				D2EDC76F1CCF16670091E435 /* Monster.h */,
 				D2EDC7701CCF16670091E435 /* Monster.m */,
+				D2EDC7A21CCF5C430091E435 /* ArcherMonster.h */,
+				D2EDC7A31CCF5C430091E435 /* ArcherMonster.m */,
+				D2EDC7A51CCF5C5A0091E435 /* KnightMonster.h */,
+				D2EDC7A61CCF5C5A0091E435 /* KnightMonster.m */,
 				D2EDC7721CCF180B0091E435 /* Facade.h */,
 				D2EDC7731CCF180B0091E435 /* Facade.m */,
 				D2EDC7781CCF1B7B0091E435 /* BuilderInterface.h */,
@@ -329,6 +349,13 @@
 				D2EDC77D1CCF1BD40091E435 /* MonsterBuilder.m */,
 				D2EDC77F1CCF1C770091E435 /* Builder.h */,
 				D2EDC7801CCF1C770091E435 /* Builder.m */,
+				D2EDC7A81CCF5E0E0091E435 /* StatusInterface.h */,
+				D2EDC7AB1CCF5E510091E435 /* IdleStatus.h */,
+				D2EDC7AC1CCF5E510091E435 /* IdleStatus.m */,
+				D2EDC7B11CCF5FB50091E435 /* JumpStatus.h */,
+				D2EDC7B21CCF5FB50091E435 /* JumpStatus.m */,
+				D2EDC7B41CCF5FC20091E435 /* RunStatus.h */,
+				D2EDC7B51CCF5FC20091E435 /* RunStatus.m */,
 			);
 			name = DesignPatterns;
 			sourceTree = "<group>";
@@ -440,7 +467,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EDC7B31CCF5FB50091E435 /* JumpStatus.m in Sources */,
 				D2EDC7711CCF16670091E435 /* Monster.m in Sources */,
+				D2EDC7A41CCF5C430091E435 /* ArcherMonster.m in Sources */,
 				6DEEDFD61CC8F8BA00343239 /* AppDelegate.m in Sources */,
 				D2EDC77B1CCF1BC80091E435 /* PlayerBuilder.m in Sources */,
 				D20A8F2A1CC9D1FB00496121 /* CoreDataManager.m in Sources */,
@@ -456,12 +485,15 @@
 				D2EDC77E1CCF1BD40091E435 /* MonsterBuilder.m in Sources */,
 				D20A8F091CC9C85C00496121 /* CoreDataTableViewController.m in Sources */,
 				6D4E36FA1CCE3BBD009FD201 /* DispatchViewController.m in Sources */,
+				D2EDC7B61CCF5FC20091E435 /* RunStatus.m in Sources */,
 				D2EDC7681CCF129B0091E435 /* Prototype.m in Sources */,
 				D26708491CCDC817003253EA /* SwapViewController.m in Sources */,
 				D20A8F151CC9CA5200496121 /* StoryboardPerform.m in Sources */,
+				D2EDC7AD1CCF5E510091E435 /* IdleStatus.m in Sources */,
 				D20A8F0C1CC9C87600496121 /* MenuTableViewController.m in Sources */,
 				D2EDC7741CCF180B0091E435 /* Facade.m in Sources */,
 				D2EDC7811CCF1C770091E435 /* Builder.m in Sources */,
+				D2EDC7A71CCF5C5A0091E435 /* KnightMonster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +674,7 @@
 				D2EDC75E1CCF10860091E435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

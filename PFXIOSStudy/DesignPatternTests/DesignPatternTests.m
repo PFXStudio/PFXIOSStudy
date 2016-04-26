@@ -16,6 +16,10 @@
 #import "Builder.h"
 #import "MonsterBuilder.h"
 #import "PlayerBuilder.h"
+#import "ArcherMonster.h"
+#import "KnightMonster.h"
+#import "JumpStatus.h"
+#import "RunStatus.h"
 
 @interface DesignPatternTests : XCTestCase
 
@@ -72,5 +76,29 @@
     builder = [Builder builderWithObjectBuilder:playerBuilder];
     [builder buildObject];
 }
+
+- (void)testTemplateMethod
+{
+    Monster *archerMonster = [ArcherMonster new];
+    [archerMonster attack];
+    
+    Monster *knightMonster = [KnightMonster new];
+    [knightMonster attack];
+}
+
+- (void)testState
+{
+    Monster *archerMonster = [ArcherMonster new];
+    archerMonster.status = [JumpStatus new];
+    [archerMonster jump];
+    [archerMonster jump];
+    
+    Monster *knightMonster = [KnightMonster new];
+    knightMonster.status = [RunStatus new];
+    [knightMonster run];
+    [knightMonster run];
+}
+
+- (void)testStrategy
 
 @end

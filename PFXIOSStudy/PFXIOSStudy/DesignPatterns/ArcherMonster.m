@@ -1,15 +1,18 @@
 //
-//  Facade.h
+//  ArcherMonster.m
 //  PFXIOSStudy
 //
 //  Created by succorer on 2016. 4. 26..
 //  Copyright © 2016년 PFXStudio. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ActionInterface.h"
+#import "ArcherMonster.h"
 
-@interface Facade : NSObject <ActionInterface>
+@implementation ArcherMonster
 
+- (NSInteger)attackDamage
+{
+    return 100;
+}
 
 @end
