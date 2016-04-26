@@ -31,7 +31,26 @@
 		D26708461CCDC7BE003253EA /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708451CCDC7BE003253EA /* ContainerViewController.m */; };
 		D26708491CCDC817003253EA /* SwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708481CCDC817003253EA /* SwapViewController.m */; };
 		D26708621CCE0950003253EA /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708611CCE0950003253EA /* EmptySegue.m */; };
+		D2EDC7591CCF10860091E435 /* DesignPatternTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7581CCF10860091E435 /* DesignPatternTests.m */; };
+		D2EDC7651CCF11860091E435 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7641CCF11860091E435 /* Singleton.m */; };
+		D2EDC7681CCF129B0091E435 /* Prototype.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7671CCF129B0091E435 /* Prototype.m */; };
+		D2EDC76B1CCF15800091E435 /* Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC76A1CCF15800091E435 /* Proxy.m */; };
+		D2EDC7711CCF16670091E435 /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7701CCF16670091E435 /* Monster.m */; };
+		D2EDC7741CCF180B0091E435 /* Facade.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7731CCF180B0091E435 /* Facade.m */; };
+		D2EDC77B1CCF1BC80091E435 /* PlayerBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC77A1CCF1BC80091E435 /* PlayerBuilder.m */; };
+		D2EDC77E1CCF1BD40091E435 /* MonsterBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC77D1CCF1BD40091E435 /* MonsterBuilder.m */; };
+		D2EDC7811CCF1C770091E435 /* Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7801CCF1C770091E435 /* Builder.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2EDC75B1CCF10860091E435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DEEDFC61CC8F8BA00343239 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DEEDFCD1CC8F8BA00343239;
+			remoteInfo = PFXIOSStudy;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6D4E36F11CCE354C009FD201 /* Block.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Block.storyboard; path = Storyboards/Block.storyboard; sourceTree = "<group>"; };
@@ -75,10 +94,38 @@
 		D26708481CCDC817003253EA /* SwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwapViewController.m; path = Controllers/SwapViewController.m; sourceTree = "<group>"; };
 		D26708601CCE0950003253EA /* EmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmptySegue.h; path = Commons/EmptySegue.h; sourceTree = "<group>"; };
 		D26708611CCE0950003253EA /* EmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptySegue.m; path = Commons/EmptySegue.m; sourceTree = "<group>"; };
+		D2EDC7561CCF10860091E435 /* DesignPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2EDC7581CCF10860091E435 /* DesignPatternTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignPatternTests.m; sourceTree = "<group>"; };
+		D2EDC75A1CCF10860091E435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2EDC7631CCF11860091E435 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = DesignPatterns/Singleton.h; sourceTree = "<group>"; };
+		D2EDC7641CCF11860091E435 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Singleton.m; path = DesignPatterns/Singleton.m; sourceTree = "<group>"; };
+		D2EDC7661CCF129B0091E435 /* Prototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prototype.h; path = DesignPatterns/Prototype.h; sourceTree = "<group>"; };
+		D2EDC7671CCF129B0091E435 /* Prototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Prototype.m; path = DesignPatterns/Prototype.m; sourceTree = "<group>"; };
+		D2EDC7691CCF15800091E435 /* Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Proxy.h; path = DesignPatterns/Proxy.h; sourceTree = "<group>"; };
+		D2EDC76A1CCF15800091E435 /* Proxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Proxy.m; path = DesignPatterns/Proxy.m; sourceTree = "<group>"; };
+		D2EDC76C1CCF15C00091E435 /* ProxyInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProxyInterface.h; path = DesignPatterns/ProxyInterface.h; sourceTree = "<group>"; };
+		D2EDC76F1CCF16670091E435 /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Monster.h; path = DesignPatterns/Monster.h; sourceTree = "<group>"; };
+		D2EDC7701CCF16670091E435 /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Monster.m; path = DesignPatterns/Monster.m; sourceTree = "<group>"; };
+		D2EDC7721CCF180B0091E435 /* Facade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Facade.h; path = DesignPatterns/Facade.h; sourceTree = "<group>"; };
+		D2EDC7731CCF180B0091E435 /* Facade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Facade.m; path = DesignPatterns/Facade.m; sourceTree = "<group>"; };
+		D2EDC7781CCF1B7B0091E435 /* BuilderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuilderInterface.h; path = DesignPatterns/BuilderInterface.h; sourceTree = "<group>"; };
+		D2EDC7791CCF1BC80091E435 /* PlayerBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerBuilder.h; path = DesignPatterns/PlayerBuilder.h; sourceTree = "<group>"; };
+		D2EDC77A1CCF1BC80091E435 /* PlayerBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerBuilder.m; path = DesignPatterns/PlayerBuilder.m; sourceTree = "<group>"; };
+		D2EDC77C1CCF1BD40091E435 /* MonsterBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MonsterBuilder.h; path = DesignPatterns/MonsterBuilder.h; sourceTree = "<group>"; };
+		D2EDC77D1CCF1BD40091E435 /* MonsterBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MonsterBuilder.m; path = DesignPatterns/MonsterBuilder.m; sourceTree = "<group>"; };
+		D2EDC77F1CCF1C770091E435 /* Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Builder.h; path = DesignPatterns/Builder.h; sourceTree = "<group>"; };
+		D2EDC7801CCF1C770091E435 /* Builder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Builder.m; path = DesignPatterns/Builder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6DEEDFCB1CC8F8BA00343239 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2EDC7531CCF10860091E435 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -109,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				6DEEDFD01CC8F8BA00343239 /* PFXIOSStudy */,
+				D2EDC7571CCF10860091E435 /* DesignPatternTests */,
 				6DEEDFCF1CC8F8BA00343239 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				6DEEDFCE1CC8F8BA00343239 /* PFXIOSStudy.app */,
+				D2EDC7561CCF10860091E435 /* DesignPatternTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +177,7 @@
 				6DEEDFD51CC8F8BA00343239 /* AppDelegate.m */,
 				D20A8F251CC9CC7C00496121 /* Commons */,
 				D20A8F061CC9C83B00496121 /* Controllers */,
+				D2EDC7621CCF11670091E435 /* DesignPatterns */,
 				D20A8F271CC9D1D300496121 /* Managers */,
 				D20A8F121CC9CA3C00496121 /* Performs */,
 				D20A8F161CC9CA6500496121 /* Resources */,
@@ -249,6 +299,40 @@
 			name = Managers;
 			sourceTree = "<group>";
 		};
+		D2EDC7571CCF10860091E435 /* DesignPatternTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2EDC7581CCF10860091E435 /* DesignPatternTests.m */,
+				D2EDC75A1CCF10860091E435 /* Info.plist */,
+			);
+			path = DesignPatternTests;
+			sourceTree = "<group>";
+		};
+		D2EDC7621CCF11670091E435 /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				D2EDC7631CCF11860091E435 /* Singleton.h */,
+				D2EDC7641CCF11860091E435 /* Singleton.m */,
+				D2EDC7661CCF129B0091E435 /* Prototype.h */,
+				D2EDC7671CCF129B0091E435 /* Prototype.m */,
+				D2EDC7691CCF15800091E435 /* Proxy.h */,
+				D2EDC76A1CCF15800091E435 /* Proxy.m */,
+				D2EDC76C1CCF15C00091E435 /* ProxyInterface.h */,
+				D2EDC76F1CCF16670091E435 /* Monster.h */,
+				D2EDC7701CCF16670091E435 /* Monster.m */,
+				D2EDC7721CCF180B0091E435 /* Facade.h */,
+				D2EDC7731CCF180B0091E435 /* Facade.m */,
+				D2EDC7781CCF1B7B0091E435 /* BuilderInterface.h */,
+				D2EDC7791CCF1BC80091E435 /* PlayerBuilder.h */,
+				D2EDC77A1CCF1BC80091E435 /* PlayerBuilder.m */,
+				D2EDC77C1CCF1BD40091E435 /* MonsterBuilder.h */,
+				D2EDC77D1CCF1BD40091E435 /* MonsterBuilder.m */,
+				D2EDC77F1CCF1C770091E435 /* Builder.h */,
+				D2EDC7801CCF1C770091E435 /* Builder.m */,
+			);
+			name = DesignPatterns;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,6 +353,24 @@
 			productReference = 6DEEDFCE1CC8F8BA00343239 /* PFXIOSStudy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D2EDC7551CCF10860091E435 /* DesignPatternTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2EDC75F1CCF10860091E435 /* Build configuration list for PBXNativeTarget "DesignPatternTests" */;
+			buildPhases = (
+				D2EDC7521CCF10860091E435 /* Sources */,
+				D2EDC7531CCF10860091E435 /* Frameworks */,
+				D2EDC7541CCF10860091E435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2EDC75C1CCF10860091E435 /* PBXTargetDependency */,
+			);
+			name = DesignPatternTests;
+			productName = DesignPatternTests;
+			productReference = D2EDC7561CCF10860091E435 /* DesignPatternTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -280,6 +382,10 @@
 				TargetAttributes = {
 					6DEEDFCD1CC8F8BA00343239 = {
 						CreatedOnToolsVersion = 7.3;
+					};
+					D2EDC7551CCF10860091E435 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 6DEEDFCD1CC8F8BA00343239;
 					};
 				};
 			};
@@ -297,6 +403,7 @@
 			projectRoot = "";
 			targets = (
 				6DEEDFCD1CC8F8BA00343239 /* PFXIOSStudy */,
+				D2EDC7551CCF10860091E435 /* DesignPatternTests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,6 +426,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D2EDC7541CCF10860091E435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -326,8 +440,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EDC7711CCF16670091E435 /* Monster.m in Sources */,
 				6DEEDFD61CC8F8BA00343239 /* AppDelegate.m in Sources */,
+				D2EDC77B1CCF1BC80091E435 /* PlayerBuilder.m in Sources */,
 				D20A8F2A1CC9D1FB00496121 /* CoreDataManager.m in Sources */,
+				D2EDC76B1CCF15800091E435 /* Proxy.m in Sources */,
 				6DEEDFD31CC8F8BA00343239 /* main.m in Sources */,
 				D26708621CCE0950003253EA /* EmptySegue.m in Sources */,
 				6D4E36F51CCE3595009FD201 /* BlockViewController.m in Sources */,
@@ -335,15 +452,36 @@
 				D26708461CCDC7BE003253EA /* ContainerViewController.m in Sources */,
 				6DE61DEC1CCAF41000C21880 /* CodeMenuViewController.m in Sources */,
 				D20A8F201CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld in Sources */,
+				D2EDC7651CCF11860091E435 /* Singleton.m in Sources */,
+				D2EDC77E1CCF1BD40091E435 /* MonsterBuilder.m in Sources */,
 				D20A8F091CC9C85C00496121 /* CoreDataTableViewController.m in Sources */,
 				6D4E36FA1CCE3BBD009FD201 /* DispatchViewController.m in Sources */,
+				D2EDC7681CCF129B0091E435 /* Prototype.m in Sources */,
 				D26708491CCDC817003253EA /* SwapViewController.m in Sources */,
 				D20A8F151CC9CA5200496121 /* StoryboardPerform.m in Sources */,
 				D20A8F0C1CC9C87600496121 /* MenuTableViewController.m in Sources */,
+				D2EDC7741CCF180B0091E435 /* Facade.m in Sources */,
+				D2EDC7811CCF1C770091E435 /* Builder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2EDC7521CCF10860091E435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2EDC7591CCF10860091E435 /* DesignPatternTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2EDC75C1CCF10860091E435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DEEDFCD1CC8F8BA00343239 /* PFXIOSStudy */;
+			targetProxy = D2EDC75B1CCF10860091E435 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6DEEDFE61CC8F8BA00343239 /* Debug */ = {
@@ -452,6 +590,30 @@
 			};
 			name = Release;
 		};
+		D2EDC75D1CCF10860091E435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DesignPatternTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pfxstudio.DesignPatternTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PFXIOSStudy.app/PFXIOSStudy";
+			};
+			name = Debug;
+		};
+		D2EDC75E1CCF10860091E435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DesignPatternTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pfxstudio.DesignPatternTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PFXIOSStudy.app/PFXIOSStudy";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,6 +634,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D2EDC75F1CCF10860091E435 /* Build configuration list for PBXNativeTarget "DesignPatternTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2EDC75D1CCF10860091E435 /* Debug */,
+				D2EDC75E1CCF10860091E435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

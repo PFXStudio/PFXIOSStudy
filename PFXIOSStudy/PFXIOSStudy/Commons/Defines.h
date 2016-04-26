@@ -12,5 +12,6 @@
 #define kRootDomain @"https://github.com/PFXStudio/PFXIOSStudy/blob/master/PFXIOSStudy/PFXIOSStudy"
 #define kFirstIdentifier @"FirstViewController"
 #define kSecondIdentifier @"SecondViewController"
+#define kMaxCount 1000
 
 #endif /* Defines_h */

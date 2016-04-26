@@ -45,14 +45,14 @@
 */
 - (IBAction)touchedBarButton:(id)sender {
     // start
-    [self runDispatchAsync];
     [self runDispatchAsyncBackground];
     [self runDispatchSync];
+    [self runDispatchAsync];
 
     return;
 }
 
-- (void)runDispatchAsync
+- (void)runDispatchSync
 {
     [self.firstLabel setText:@""];
 
@@ -67,55 +67,59 @@
     dispatch_queue_t queue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
     // 동기로 작업을 수행
     dispatch_sync(queue, ^{
+        NSString *totalText = @"";
         NSInteger x = 2;
-        for (int i = 1; i <= 9; i++)
+        for (long i = 1; i < kMaxCount; i++)
         {
-            NSString *text = [NSString stringWithFormat:@"%d x %d = %d\t", x, i, x * i];
-            NSString *appendingString = [self.firstLabel.text stringByAppendingString:text];
-            NSLog(@"%@", appendingString);
-            [self.firstLabel setText:appendingString];
+            NSString *text = [NSString stringWithFormat:@"[%ldx%ld=%ld]", x, i, x * i];
+            NSLog(@"%@", text);
+            totalText = [totalText stringByAppendingString:text];
         }
+        
+        [self.firstLabel setText:totalText];
     });
 }
 
-- (void)runDispatchAsyncBackground
+- (void)runDispatchAsync
 {
     [self.secondLabel setText:@""];
     // 메인 디스패치 큐는 작업을 수행하기 위해 메인 스레드를 이용하며, 시리얼 디스패치 큐임
     dispatch_queue_t queue = dispatch_get_main_queue();
     // 비동기로 작업을 수행
     dispatch_async(queue, ^{
+        NSString *totalText = @"";
         NSInteger x = 3;
-        for (int i = 1; i <= 9; i++)
+        for (long i = 1; i < kMaxCount; i++)
         {
-            NSString *text = [NSString stringWithFormat:@"%d x %d = %d\t", x, i, x * i];
-            NSString *appendingString = [self.secondLabel.text stringByAppendingString:text];
-            NSLog(@"%@", appendingString);
-            [self.secondLabel setText:appendingString];
+            NSString *text = [NSString stringWithFormat:@"[%ldx%ld=%ld]", x, i, x * i];
+            NSLog(@"%@", text);
+            totalText = [totalText stringByAppendingString:text];
         }
+
+        [self.secondLabel setText:totalText];
     });
-    
 }
 
-- (void)runDispatchSync
+- (void)runDispatchAsyncBackground
 {
     [self.thirdLabel setText:@""];
     // 글로벌 디스패치 큐는 콘커런트 디스패치 큐로 XNU 커널에 의하여 새로운 스레드에 작업을 수행
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
-    //
+    // 비동기로 작업을 수행
     dispatch_async(queue, ^{
+        NSString *totalText = @"";
         NSInteger x = 4;
-        for (int i = 1; i <= 9; i++)
+        for (long i = 1; i < kMaxCount; i++)
         {
-            NSString *text = [NSString stringWithFormat:@"%d x %d = %d\t", x, i, x * i];
-            NSString *appendingString = [self.thirdLabel.text stringByAppendingString:text];
-            NSLog(@"%@", appendingString);
-            
-            [self.thirdLabel performSelectorOnMainThread:@selector(setText:) withObject:appendingString waitUntilDone:YES];
+            NSString *text = [NSString stringWithFormat:@"[%ldx%ld=%ld]", x, i, x * i];
+            NSLog(@"%@", text);
+            totalText = [totalText stringByAppendingString:text];
         }
+
+        // 메인 쓰레드가 아니기 때문에 메인 쓰레드로 올려 줘야 콘트롤러에 표기 된다
+        [self.thirdLabel performSelectorOnMainThread:@selector(setText:) withObject:totalText waitUntilDone:NO];
     });
 }
-
 
 
 @end
