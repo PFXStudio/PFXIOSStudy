@@ -20,6 +20,9 @@
 #import "Enums.h"
 #import "Defines.h"
 
+// Datas
+#import "AppData.h"
+
 // Managers
 #import "CoreDataManager.h"
 

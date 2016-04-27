@@ -7,8 +7,11 @@
 //
 
 #import "NetworkTableViewController.h"
+#import "AppListParser.h"
 
-@interface NetworkTableViewController ()
+@interface NetworkTableViewController () <NSURLConnectionDelegate>
+
+@property (strong, nonatomic) NSArray *appDatas;
 
 @end
 
@@ -17,8 +20,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // TODO : 
-//    https://itunes.apple.com/kr/rss/newfreeapplications/limit=100/genre=6014/xml
+    self.appDatas = [NSArray array];
+    
+    NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/kr/rss/newfreeapplications/limit=100/genre=6014/xml"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"error : %@", error);
+        if (error != nil)
+        {
+            return;
+        }
+        
+        [AppListParser parseWithData:data completion:^(NSArray *appDatas) {
+                      
+            
+        } failure:^(NSError *error) {
+            
+        }];
+        
+    }] resume];
+    
+//
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -34,13 +56,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [[AppData sharedAppDatas] count];
 }
 
 /*

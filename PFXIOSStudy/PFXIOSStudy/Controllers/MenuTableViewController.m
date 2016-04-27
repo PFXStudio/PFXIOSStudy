@@ -12,6 +12,7 @@
 #import "BlockViewController.h"
 #import "DispatchViewController.h"
 #import "DesignPatternViewController.h"
+#import "NetworkTableViewController.h"
 
 @interface MenuTableViewController ()
 
@@ -94,6 +95,14 @@
     if (indexPath.row == MenuType_DesignPattern)
     {
         DesignPatternViewController *designPatternViewController = [[StoryboardPerform sharedDesignPatternStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([DesignPatternViewController class])];
+        [self.navigationController pushViewController:designPatternViewController animated:YES];
+        
+        return;
+    }
+
+    if (indexPath.row == MenuType_Network)
+    {
+        NetworkTableViewController *designPatternViewController = [[StoryboardPerform sharedNetworkStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([NetworkTableViewController class])];
         [self.navigationController pushViewController:designPatternViewController animated:YES];
         
         return;

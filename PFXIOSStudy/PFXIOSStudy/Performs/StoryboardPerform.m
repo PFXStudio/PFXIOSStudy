@@ -52,4 +52,10 @@
     return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
 }
 
++ (UIStoryboard *)sharedNetworkStoryBoard
+{
+    NSString * storyboardName = @"Network";
+    return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+}
+
 @end

@@ -27,6 +27,9 @@
 		D20A8F201CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D20A8F1E1CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld */; };
 		D20A8F221CC9CB2D00496121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20A8F211CC9CB2D00496121 /* LaunchScreen.storyboard */; };
 		D20A8F2A1CC9D1FB00496121 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D20A8F291CC9D1FB00496121 /* CoreDataManager.m */; };
+		D23EABCE1CD0B2C40057728C /* Network.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23EABCD1CD0B2C40057728C /* Network.storyboard */; };
+		D23EABD21CD0B3970057728C /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = D23EABD11CD0B3970057728C /* AppData.m */; };
+		D23EABD61CD0B47B0057728C /* AppListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D23EABD51CD0B47B0057728C /* AppListParser.m */; };
 		D26708421CCDC426003253EA /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26708411CCDC426003253EA /* Container.storyboard */; };
 		D26708461CCDC7BE003253EA /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708451CCDC7BE003253EA /* ContainerViewController.m */; };
 		D26708491CCDC817003253EA /* SwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708481CCDC817003253EA /* SwapViewController.m */; };
@@ -104,6 +107,11 @@
 		D20A8F281CC9D1FB00496121 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = Managers/CoreDataManager.h; sourceTree = "<group>"; };
 		D20A8F291CC9D1FB00496121 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = Managers/CoreDataManager.m; sourceTree = "<group>"; };
 		D20A8F2E1CC9D3CB00496121 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = Commons/Defines.h; sourceTree = "<group>"; };
+		D23EABCD1CD0B2C40057728C /* Network.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Network.storyboard; path = Storyboards/Network.storyboard; sourceTree = "<group>"; };
+		D23EABD01CD0B3970057728C /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppData.h; path = Datas/AppData.h; sourceTree = "<group>"; };
+		D23EABD11CD0B3970057728C /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppData.m; path = Datas/AppData.m; sourceTree = "<group>"; };
+		D23EABD41CD0B47B0057728C /* AppListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppListParser.h; path = Parsers/AppListParser.h; sourceTree = "<group>"; };
+		D23EABD51CD0B47B0057728C /* AppListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppListParser.m; path = Parsers/AppListParser.m; sourceTree = "<group>"; };
 		D26708411CCDC426003253EA /* Container.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Container.storyboard; path = Storyboards/Container.storyboard; sourceTree = "<group>"; };
 		D26708441CCDC7BE003253EA /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContainerViewController.h; path = Controllers/ContainerViewController.h; sourceTree = "<group>"; };
 		D26708451CCDC7BE003253EA /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContainerViewController.m; path = Controllers/ContainerViewController.m; sourceTree = "<group>"; };
@@ -230,8 +238,10 @@
 				6DEEDFD51CC8F8BA00343239 /* AppDelegate.m */,
 				D20A8F251CC9CC7C00496121 /* Commons */,
 				D20A8F061CC9C83B00496121 /* Controllers */,
+				D23EABCF1CD0B37D0057728C /* Data */,
 				D2EDC7621CCF11670091E435 /* DesignPatterns */,
 				D20A8F271CC9D1D300496121 /* Managers */,
+				D23EABD31CD0B4600057728C /* Parsers */,
 				D20A8F121CC9CA3C00496121 /* Performs */,
 				D20A8F161CC9CA6500496121 /* Resources */,
 				D20A8F0D1CC9C91300496121 /* StoryBoards */,
@@ -288,6 +298,7 @@
 				D20A8F0E1CC9C93000496121 /* Menu.storyboard */,
 				6DE61DDE1CCAEDE500C21880 /* Web.storyboard */,
 				D2F726671CD069B00005BFB0 /* DesignPattern.storyboard */,
+				D23EABCD1CD0B2C40057728C /* Network.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -355,6 +366,24 @@
 				D20A8F291CC9D1FB00496121 /* CoreDataManager.m */,
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		D23EABCF1CD0B37D0057728C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D23EABD01CD0B3970057728C /* AppData.h */,
+				D23EABD11CD0B3970057728C /* AppData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		D23EABD31CD0B4600057728C /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				D23EABD41CD0B47B0057728C /* AppListParser.h */,
+				D23EABD51CD0B47B0057728C /* AppListParser.m */,
+			);
+			name = Parsers;
 			sourceTree = "<group>";
 		};
 		D2EDC7571CCF10860091E435 /* DesignPatternTests */ = {
@@ -505,6 +534,7 @@
 				D20A8F191CC9CA8500496121 /* Study.plist in Resources */,
 				D2F726681CD069B00005BFB0 /* DesignPattern.storyboard in Resources */,
 				D20A8F111CC9CA3800496121 /* CoreData.storyboard in Resources */,
+				D23EABCE1CD0B2C40057728C /* Network.storyboard in Resources */,
 				6D4E36F71CCE3B71009FD201 /* Dispatch.storyboard in Resources */,
 				D20A8F0F1CC9C93000496121 /* Menu.storyboard in Resources */,
 				6D4E36F21CCE354C009FD201 /* Block.storyboard in Resources */,
@@ -560,11 +590,13 @@
 				D2F726511CD064C00005BFB0 /* FireSkill.m in Sources */,
 				D2F7264B1CD0608F0005BFB0 /* Quest10002.m in Sources */,
 				D26708491CCDC817003253EA /* SwapViewController.m in Sources */,
+				D23EABD21CD0B3970057728C /* AppData.m in Sources */,
 				D20A8F151CC9CA5200496121 /* StoryboardPerform.m in Sources */,
 				D2EDC7AD1CCF5E510091E435 /* IdleStatus.m in Sources */,
 				D2F7266B1CD06A100005BFB0 /* DesignPatternViewController.m in Sources */,
 				D20A8F0C1CC9C87600496121 /* MenuTableViewController.m in Sources */,
 				D2EDC7741CCF180B0091E435 /* Facade.m in Sources */,
+				D23EABD61CD0B47B0057728C /* AppListParser.m in Sources */,
 				D2F726601CD0669D0005BFB0 /* KnightSkillFactory.m in Sources */,
 				D2EDC7811CCF1C770091E435 /* Builder.m in Sources */,
 				D2EDC7A71CCF5C5A0091E435 /* KnightMonster.m in Sources */,

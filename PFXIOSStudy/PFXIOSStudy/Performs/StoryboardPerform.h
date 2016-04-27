@@ -17,5 +17,6 @@
 + (UIStoryboard *)sharedBlockStoryBoard;
 + (UIStoryboard *)sharedDispatchStoryBoard;
 + (UIStoryboard *)sharedDesignPatternStoryBoard;
++ (UIStoryboard *)sharedNetworkStoryBoard;
 
 @end
