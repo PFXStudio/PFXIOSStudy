@@ -46,4 +46,10 @@
     return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
 }
 
++ (UIStoryboard *)sharedDesignPatternStoryBoard
+{
+    NSString * storyboardName = @"DesignPattern";
+    return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+}
+
 @end

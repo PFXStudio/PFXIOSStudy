@@ -10,6 +10,7 @@
 
 @interface CodeMenuViewController : UIViewController
 
+- (void)initWithSender:(id)sender path:(NSString *)path;
 - (void)initWithSender:(id)sender parentView:(UIView *)parentView path:(NSString *)path;
 
 @end

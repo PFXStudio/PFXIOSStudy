@@ -8,6 +8,7 @@
 	<string>Dispatch</string>
 	<string>DesignPattern</string>
 	<string>Network</string>
+	<string>AFNetwork</string>
 	<string>Serialize</string>
 </array>
 </plist>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="EC0-ks-649">
+            <objects>
+                <navigationController id="BOf-LD-qRG" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nIb-yz-YtU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8gn-8y-sYZ" kind="relationship" relationship="rootViewController" id="hop-k5-qmV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CpY-Lj-BdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684" y="341"/>
+        </scene>
+        <!--Design Pattern View Controller-->
+        <scene sceneID="CR6-eV-plT">
+            <objects>
+                <viewController storyboardIdentifier="DesignPatternViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8gn-8y-sYZ" customClass="DesignPatternViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ndk-yB-4xP"/>
+                        <viewControllerLayoutGuide type="bottom" id="hOV-iP-ccs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gpd-6z-wyn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kp-AJ-qCA">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Kp-AJ-qCA" firstAttribute="bottom" secondItem="hOV-iP-ccs" secondAttribute="top" id="H1M-Tu-T7M"/>
+                            <constraint firstItem="0Kp-AJ-qCA" firstAttribute="leading" secondItem="Gpd-6z-wyn" secondAttribute="leading" id="S0h-xf-uRe"/>
+                            <constraint firstItem="0Kp-AJ-qCA" firstAttribute="top" secondItem="Ndk-yB-4xP" secondAttribute="bottom" constant="559" id="hBI-T5-tfY"/>
+                            <constraint firstAttribute="trailing" secondItem="0Kp-AJ-qCA" secondAttribute="trailing" id="nAq-az-Lg0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fGC-wX-C1D"/>
+                    <connections>
+                        <outlet property="containerView" destination="0Kp-AJ-qCA" id="GSO-vo-Dij"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCE-vj-Xb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244.5" y="340.5"/>
+        </scene>
+    </scenes>
+</document>

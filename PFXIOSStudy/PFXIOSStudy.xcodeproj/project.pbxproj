@@ -45,6 +45,18 @@
 		D2EDC7AD1CCF5E510091E435 /* IdleStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7AC1CCF5E510091E435 /* IdleStatus.m */; };
 		D2EDC7B31CCF5FB50091E435 /* JumpStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7B21CCF5FB50091E435 /* JumpStatus.m */; };
 		D2EDC7B61CCF5FC20091E435 /* RunStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7B51CCF5FC20091E435 /* RunStatus.m */; };
+		D2F726451CD060680005BFB0 /* Quest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F726441CD060680005BFB0 /* Quest.m */; };
+		D2F726481CD060840005BFB0 /* Quest10001.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F726471CD060840005BFB0 /* Quest10001.m */; };
+		D2F7264B1CD0608F0005BFB0 /* Quest10002.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F7264A1CD0608F0005BFB0 /* Quest10002.m */; };
+		D2F726511CD064C00005BFB0 /* FireSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F726501CD064C00005BFB0 /* FireSkill.m */; };
+		D2F726541CD064CF0005BFB0 /* IceSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F726531CD064CF0005BFB0 /* IceSkill.m */; };
+		D2F7265D1CD066100005BFB0 /* ArcherSkillFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F7265C1CD066100005BFB0 /* ArcherSkillFactory.m */; };
+		D2F726601CD0669D0005BFB0 /* KnightSkillFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F7265F1CD0669D0005BFB0 /* KnightSkillFactory.m */; };
+		D2F726631CD067180005BFB0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F726621CD067180005BFB0 /* Player.m */; };
+		D2F726661CD068E20005BFB0 /* QuestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F726651CD068E20005BFB0 /* QuestFactory.m */; };
+		D2F726681CD069B00005BFB0 /* DesignPattern.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F726671CD069B00005BFB0 /* DesignPattern.storyboard */; };
+		D2F7266B1CD06A100005BFB0 /* DesignPatternViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F7266A1CD06A100005BFB0 /* DesignPatternViewController.m */; };
+		D2F7266E1CD06EBA0005BFB0 /* NetworkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F7266D1CD06EBA0005BFB0 /* NetworkTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +143,31 @@
 		D2EDC7B21CCF5FB50091E435 /* JumpStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JumpStatus.m; path = DesignPatterns/JumpStatus.m; sourceTree = "<group>"; };
 		D2EDC7B41CCF5FC20091E435 /* RunStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunStatus.h; path = DesignPatterns/RunStatus.h; sourceTree = "<group>"; };
 		D2EDC7B51CCF5FC20091E435 /* RunStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunStatus.m; path = DesignPatterns/RunStatus.m; sourceTree = "<group>"; };
+		D2F726431CD060680005BFB0 /* Quest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quest.h; path = DesignPatterns/Quest.h; sourceTree = "<group>"; };
+		D2F726441CD060680005BFB0 /* Quest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Quest.m; path = DesignPatterns/Quest.m; sourceTree = "<group>"; };
+		D2F726461CD060840005BFB0 /* Quest10001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quest10001.h; path = DesignPatterns/Quest10001.h; sourceTree = "<group>"; };
+		D2F726471CD060840005BFB0 /* Quest10001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Quest10001.m; path = DesignPatterns/Quest10001.m; sourceTree = "<group>"; };
+		D2F726491CD0608F0005BFB0 /* Quest10002.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quest10002.h; path = DesignPatterns/Quest10002.h; sourceTree = "<group>"; };
+		D2F7264A1CD0608F0005BFB0 /* Quest10002.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Quest10002.m; path = DesignPatterns/Quest10002.m; sourceTree = "<group>"; };
+		D2F7264C1CD064940005BFB0 /* SkillInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkillInterface.h; path = DesignPatterns/SkillInterface.h; sourceTree = "<group>"; };
+		D2F7264F1CD064C00005BFB0 /* FireSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FireSkill.h; path = DesignPatterns/FireSkill.h; sourceTree = "<group>"; };
+		D2F726501CD064C00005BFB0 /* FireSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FireSkill.m; path = DesignPatterns/FireSkill.m; sourceTree = "<group>"; };
+		D2F726521CD064CF0005BFB0 /* IceSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IceSkill.h; path = DesignPatterns/IceSkill.h; sourceTree = "<group>"; };
+		D2F726531CD064CF0005BFB0 /* IceSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IceSkill.m; path = DesignPatterns/IceSkill.m; sourceTree = "<group>"; };
+		D2F726581CD0656B0005BFB0 /* SkillFactoryInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkillFactoryInterface.h; path = DesignPatterns/SkillFactoryInterface.h; sourceTree = "<group>"; };
+		D2F7265B1CD066100005BFB0 /* ArcherSkillFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcherSkillFactory.h; path = DesignPatterns/ArcherSkillFactory.h; sourceTree = "<group>"; };
+		D2F7265C1CD066100005BFB0 /* ArcherSkillFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArcherSkillFactory.m; path = DesignPatterns/ArcherSkillFactory.m; sourceTree = "<group>"; };
+		D2F7265E1CD0669D0005BFB0 /* KnightSkillFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KnightSkillFactory.h; path = DesignPatterns/KnightSkillFactory.h; sourceTree = "<group>"; };
+		D2F7265F1CD0669D0005BFB0 /* KnightSkillFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KnightSkillFactory.m; path = DesignPatterns/KnightSkillFactory.m; sourceTree = "<group>"; };
+		D2F726611CD067180005BFB0 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = DesignPatterns/Player.h; sourceTree = "<group>"; };
+		D2F726621CD067180005BFB0 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = DesignPatterns/Player.m; sourceTree = "<group>"; };
+		D2F726641CD068E20005BFB0 /* QuestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestFactory.h; path = DesignPatterns/QuestFactory.h; sourceTree = "<group>"; };
+		D2F726651CD068E20005BFB0 /* QuestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestFactory.m; path = DesignPatterns/QuestFactory.m; sourceTree = "<group>"; };
+		D2F726671CD069B00005BFB0 /* DesignPattern.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DesignPattern.storyboard; path = Storyboards/DesignPattern.storyboard; sourceTree = "<group>"; };
+		D2F726691CD06A100005BFB0 /* DesignPatternViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DesignPatternViewController.h; path = DesignPatterns/DesignPatternViewController.h; sourceTree = "<group>"; };
+		D2F7266A1CD06A100005BFB0 /* DesignPatternViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DesignPatternViewController.m; path = DesignPatterns/DesignPatternViewController.m; sourceTree = "<group>"; };
+		D2F7266C1CD06EBA0005BFB0 /* NetworkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkTableViewController.h; path = Controllers/NetworkTableViewController.h; sourceTree = "<group>"; };
+		D2F7266D1CD06EBA0005BFB0 /* NetworkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkTableViewController.m; path = Controllers/NetworkTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +269,10 @@
 				6D4E36F41CCE3595009FD201 /* BlockViewController.m */,
 				6D4E36F81CCE3BBD009FD201 /* DispatchViewController.h */,
 				6D4E36F91CCE3BBD009FD201 /* DispatchViewController.m */,
+				D2F726691CD06A100005BFB0 /* DesignPatternViewController.h */,
+				D2F7266A1CD06A100005BFB0 /* DesignPatternViewController.m */,
+				D2F7266C1CD06EBA0005BFB0 /* NetworkTableViewController.h */,
+				D2F7266D1CD06EBA0005BFB0 /* NetworkTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +287,7 @@
 				D20A8F211CC9CB2D00496121 /* LaunchScreen.storyboard */,
 				D20A8F0E1CC9C93000496121 /* Menu.storyboard */,
 				6DE61DDE1CCAEDE500C21880 /* Web.storyboard */,
+				D2F726671CD069B00005BFB0 /* DesignPattern.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -356,6 +398,26 @@
 				D2EDC7B21CCF5FB50091E435 /* JumpStatus.m */,
 				D2EDC7B41CCF5FC20091E435 /* RunStatus.h */,
 				D2EDC7B51CCF5FC20091E435 /* RunStatus.m */,
+				D2F726431CD060680005BFB0 /* Quest.h */,
+				D2F726441CD060680005BFB0 /* Quest.m */,
+				D2F726461CD060840005BFB0 /* Quest10001.h */,
+				D2F726471CD060840005BFB0 /* Quest10001.m */,
+				D2F726491CD0608F0005BFB0 /* Quest10002.h */,
+				D2F7264A1CD0608F0005BFB0 /* Quest10002.m */,
+				D2F7264C1CD064940005BFB0 /* SkillInterface.h */,
+				D2F7264F1CD064C00005BFB0 /* FireSkill.h */,
+				D2F726501CD064C00005BFB0 /* FireSkill.m */,
+				D2F726521CD064CF0005BFB0 /* IceSkill.h */,
+				D2F726531CD064CF0005BFB0 /* IceSkill.m */,
+				D2F726581CD0656B0005BFB0 /* SkillFactoryInterface.h */,
+				D2F7265B1CD066100005BFB0 /* ArcherSkillFactory.h */,
+				D2F7265C1CD066100005BFB0 /* ArcherSkillFactory.m */,
+				D2F7265E1CD0669D0005BFB0 /* KnightSkillFactory.h */,
+				D2F7265F1CD0669D0005BFB0 /* KnightSkillFactory.m */,
+				D2F726611CD067180005BFB0 /* Player.h */,
+				D2F726621CD067180005BFB0 /* Player.m */,
+				D2F726641CD068E20005BFB0 /* QuestFactory.h */,
+				D2F726651CD068E20005BFB0 /* QuestFactory.m */,
 			);
 			name = DesignPatterns;
 			sourceTree = "<group>";
@@ -441,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20A8F191CC9CA8500496121 /* Study.plist in Resources */,
+				D2F726681CD069B00005BFB0 /* DesignPattern.storyboard in Resources */,
 				D20A8F111CC9CA3800496121 /* CoreData.storyboard in Resources */,
 				6D4E36F71CCE3B71009FD201 /* Dispatch.storyboard in Resources */,
 				D20A8F0F1CC9C93000496121 /* Menu.storyboard in Resources */,
@@ -471,27 +534,38 @@
 				D2EDC7711CCF16670091E435 /* Monster.m in Sources */,
 				D2EDC7A41CCF5C430091E435 /* ArcherMonster.m in Sources */,
 				6DEEDFD61CC8F8BA00343239 /* AppDelegate.m in Sources */,
+				D2F726481CD060840005BFB0 /* Quest10001.m in Sources */,
+				D2F726451CD060680005BFB0 /* Quest.m in Sources */,
+				D2F7265D1CD066100005BFB0 /* ArcherSkillFactory.m in Sources */,
 				D2EDC77B1CCF1BC80091E435 /* PlayerBuilder.m in Sources */,
 				D20A8F2A1CC9D1FB00496121 /* CoreDataManager.m in Sources */,
 				D2EDC76B1CCF15800091E435 /* Proxy.m in Sources */,
 				6DEEDFD31CC8F8BA00343239 /* main.m in Sources */,
+				D2F726661CD068E20005BFB0 /* QuestFactory.m in Sources */,
 				D26708621CCE0950003253EA /* EmptySegue.m in Sources */,
 				6D4E36F51CCE3595009FD201 /* BlockViewController.m in Sources */,
 				6DE61DE71CCAEFFC00C21880 /* CodeViewController.m in Sources */,
 				D26708461CCDC7BE003253EA /* ContainerViewController.m in Sources */,
+				D2F726631CD067180005BFB0 /* Player.m in Sources */,
 				6DE61DEC1CCAF41000C21880 /* CodeMenuViewController.m in Sources */,
 				D20A8F201CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld in Sources */,
 				D2EDC7651CCF11860091E435 /* Singleton.m in Sources */,
 				D2EDC77E1CCF1BD40091E435 /* MonsterBuilder.m in Sources */,
 				D20A8F091CC9C85C00496121 /* CoreDataTableViewController.m in Sources */,
+				D2F7266E1CD06EBA0005BFB0 /* NetworkTableViewController.m in Sources */,
 				6D4E36FA1CCE3BBD009FD201 /* DispatchViewController.m in Sources */,
 				D2EDC7B61CCF5FC20091E435 /* RunStatus.m in Sources */,
+				D2F726541CD064CF0005BFB0 /* IceSkill.m in Sources */,
 				D2EDC7681CCF129B0091E435 /* Prototype.m in Sources */,
+				D2F726511CD064C00005BFB0 /* FireSkill.m in Sources */,
+				D2F7264B1CD0608F0005BFB0 /* Quest10002.m in Sources */,
 				D26708491CCDC817003253EA /* SwapViewController.m in Sources */,
 				D20A8F151CC9CA5200496121 /* StoryboardPerform.m in Sources */,
 				D2EDC7AD1CCF5E510091E435 /* IdleStatus.m in Sources */,
+				D2F7266B1CD06A100005BFB0 /* DesignPatternViewController.m in Sources */,
 				D20A8F0C1CC9C87600496121 /* MenuTableViewController.m in Sources */,
 				D2EDC7741CCF180B0091E435 /* Facade.m in Sources */,
+				D2F726601CD0669D0005BFB0 /* KnightSkillFactory.m in Sources */,
 				D2EDC7811CCF1C770091E435 /* Builder.m in Sources */,
 				D2EDC7A71CCF5C5A0091E435 /* KnightMonster.m in Sources */,
 			);

@@ -20,6 +20,12 @@
 #import "KnightMonster.h"
 #import "JumpStatus.h"
 #import "RunStatus.h"
+#import "Quest10001.h"
+#import "Quest10002.h"
+#import "ArcherSkillFactory.h"
+#import "KnightSkillFactory.h"
+#import "Player.h"
+#import "QuestFactory.h"
 
 @interface DesignPatternTests : XCTestCase
 
@@ -100,5 +106,35 @@
 }
 
 - (void)testStrategy
+{
+    Quest *quest = [Quest10001 new];
+    NSLog(@"%@", [quest conditionInfo]);
+
+    quest = [Quest10002 new];
+    NSLog(@"%@", [quest conditionInfo]);
+}
+
+- (void)testAbstractFactory
+{
+    Player *player = [Player new];
+    id<SkillFactoryInterface>
+    skillFactory = [ArcherSkillFactory new];
+    [player setSkill:[skillFactory createSkill]];
+    [player.skill learnSkill];
+    
+    skillFactory = [KnightSkillFactory new];
+    [player setSkill:[skillFactory createSkill]];
+    [player.skill learnSkill];
+}
+
+- (void)testFactory
+{
+    Quest *
+    quest = [QuestFactory questWithIndex:10001];
+    NSLog(@"%@", [quest conditionInfo]);
+
+    quest = [QuestFactory questWithIndex:10002];
+    NSLog(@"%@", [quest conditionInfo]);
+}
 
 @end

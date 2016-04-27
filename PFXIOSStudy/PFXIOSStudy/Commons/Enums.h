@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, MenuType)
     MenuType_ContainerView,
     MenuType_Block,
     MenuType_Dispatch,
+    MenuType_DesignPattern,
     
     MenuType_Max,
 };

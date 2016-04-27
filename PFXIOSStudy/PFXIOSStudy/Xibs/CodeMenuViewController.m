@@ -18,10 +18,15 @@
 
 @implementation CodeMenuViewController
 
-- (void)initWithSender:(id)sender parentView:(UIView *)parentView path:(NSString *)path
+- (void)initWithSender:(id)sender path:(NSString *)path
 {
     self.sender = sender;
-    self.path = [kRootDomain stringByAppendingPathComponent:path];
+    self.path = [kRootDomain stringByAppendingPathComponent:path];;
+}
+
+- (void)initWithSender:(id)sender parentView:(UIView *)parentView path:(NSString *)path
+{
+    [self initWithSender:sender path:path];
     
     self.view.translatesAutoresizingMaskIntoConstraints = NO;
     [parentView addSubview:self.view];

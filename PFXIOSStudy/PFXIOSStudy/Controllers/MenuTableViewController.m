@@ -11,6 +11,7 @@
 #import "ContainerViewController.h"
 #import "BlockViewController.h"
 #import "DispatchViewController.h"
+#import "DesignPatternViewController.h"
 
 @interface MenuTableViewController ()
 
@@ -86,6 +87,14 @@
     {
         DispatchViewController *dispatchViewController = [[StoryboardPerform sharedDispatchStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([DispatchViewController class])];
         [self.navigationController pushViewController:dispatchViewController animated:YES];
+        
+        return;
+    }
+
+    if (indexPath.row == MenuType_DesignPattern)
+    {
+        DesignPatternViewController *designPatternViewController = [[StoryboardPerform sharedDesignPatternStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([DesignPatternViewController class])];
+        [self.navigationController pushViewController:designPatternViewController animated:YES];
         
         return;
     }
