@@ -31,8 +31,8 @@
             return;
         }
         
-        [AppListParser parseWithData:data completion:^(NSArray *appDatas) {
-                      
+        [[AppListParser new] parseWithData:data completion:^(NSArray *appDatas) {
+            
             
         } failure:^(NSError *error) {
             
@@ -60,7 +60,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[AppData sharedAppDatas] count];
+    return [self.appDatas count];
 }
 
 /*

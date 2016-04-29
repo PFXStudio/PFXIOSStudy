@@ -10,6 +10,6 @@
 
 @interface AppListParser : NSObject
 
-+ (void)parseWithData:(NSData *)data completion:(void(^)(NSArray *appDatas))completion failure:(void(^)(NSError *error))failure;
+- (void)parseWithData:(NSData *)data completion:(void(^)(NSArray *appDatas))completion failure:(void(^)(NSError *error))failure;
 
 @end
