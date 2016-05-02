@@ -14,6 +14,8 @@
 @property (strong, nonatomic) NSMutableArray *appDatas;
 @property (strong, nonatomic) NSString *elementName;
 @property (strong, nonatomic) AppData *appData;
+@property (strong, nonatomic) void(^completionBlock)(NSArray *appDatas, NSError *error);
+
 
 @end
 
@@ -104,10 +106,11 @@
  
  */
 
-- (void)parseWithData:(NSData *)data completion:(void(^)(NSArray *appDatas))completion failure:(void(^)(NSError *error))failure
+- (void)parseWithData:(NSData *)data completion:(void(^)(NSArray *appDatas, NSError *error))completion
 {
     self.appDatas = [NSMutableArray array];
-
+    self.completionBlock = completion;
+    
     NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:data];
     xmlParser.delegate = self;
     [xmlParser parse];
@@ -125,39 +128,44 @@
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
-    if ([self.elementName isEqualToString:@"entry"] == YES)
+    self.elementName = @"";
+    if (self.completionBlock == nil)
     {
-        [self.appDatas addObject:self.appData];
         return;
     }
+    
+    self.completionBlock(self.appDatas, nil);
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
     if ([self.elementName isEqualToString:@"im:artist"] == YES)
     {
-        NSLog(@"2 im:artist %@", string);
+        self.appData.artist = string;
         return;
     }
 
     if ([self.elementName isEqualToString:@"title"] == YES)
     {
-        NSLog(@"1 title %@", string);
+        self.appData.title = string;
         return;
     }
 
     if ([self.elementName isEqualToString:@"im:image"] == YES)
     {
-        NSLog(@"3 im:image %@", string);
+        [self.appData.imagePaths addObject:string];
         return;
     }
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(nullable NSString *)namespaceURI qualifiedName:(nullable NSString *)qName
 {
-    NSLog(@"didEndElement %@ namespaceURI %@ qualifiedName %@", elementName, namespaceURI, qName);
-    if ([self.elementName isEqualToString:@"im:image"] == YES)
+    self.elementName = @"";
+    if ([elementName isEqualToString:@"entry"] == YES)
     {
+        [self.appDatas addObject:self.appData];
+        NSLog(@"%@", [self.appData description]);
+        return;
     }
 }
 

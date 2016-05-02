@@ -10,8 +10,8 @@
 
 @interface AppData : NSObject
 
-@property (strong, nonatomic) NSString *name;
-
-+ (instancetype)appDataWithName:(NSString *)name;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *artist;
+@property (strong, nonatomic) NSMutableArray *imagePaths;
 
 @end

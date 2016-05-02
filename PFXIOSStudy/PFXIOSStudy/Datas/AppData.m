@@ -15,13 +15,17 @@
 
 @implementation AppData
 
-+ (instancetype)appDataWithName:(NSString *)name
+- (instancetype)init
 {
-    AppData *appData = [AppData new];
-    appData.name = name;
+    self = [super init];
+    self.imagePaths = [NSMutableArray array];
     
-    return appData;
+    return self;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"title : %@\nartist : %@\nimagePaths : %@", self.title, self.artist, self.imagePaths];
+}
 
 @end

@@ -9,6 +9,7 @@
 #ifndef Defines_h
 #define Defines_h
 
+#define kImageFolderName @"Images"
 #define kRootDomain @"https://github.com/PFXStudio/PFXIOSStudy/blob/master/PFXIOSStudy/PFXIOSStudy"
 #define kFirstIdentifier @"FirstViewController"
 #define kSecondIdentifier @"SecondViewController"

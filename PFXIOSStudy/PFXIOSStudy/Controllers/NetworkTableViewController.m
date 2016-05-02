@@ -30,11 +30,14 @@
             return;
         }
         
-        [[AppListParser new] parseWithData:data completion:^(NSArray *appDatas) {
+        [[AppListParser new] parseWithData:data completion:^(NSArray *appDatas, NSError *error) {
+            if (error != nil)
+            {
+                return;
+            }
             
-            
-        } failure:^(NSError *error) {
-            
+            self.appDatas = appDatas;
+            [self.tableView reloadData];
         }];
         
     }] resume];
@@ -62,15 +65,40 @@
     return [self.appDatas count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    AppData *appData = [self.appDatas objectAtIndex:indexPath.row];
+    [cell.textLabel setText:appData.title];
+    [cell.detailTextLabel setText:appData.artist];
     
+#error TODO : 
+    NSString *imagePath = [appData.imagePaths firstObject];
+    UIImage *image = [[ImagePerform sharedImagePerform] loadWithName:[imagePath lastPathComponent]];
+    if (image != nil)
+    {
+        [cell.imageView setImage:image];
+        return cell;
+    }
+    
+    __weak typeof(UITableViewCell *) weakCell = cell;
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:imagePath]];
+    UIImageView *imageView = [UIImageView new];
+    [imageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        if (image == nil)
+        {
+            return;
+        }
+        
+        [[ImagePerform sharedImagePerform] saveWithName:[imagePath lastPathComponent] image:image];
+        [weakCell.imageView setImage:image];
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        
+    }];
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
