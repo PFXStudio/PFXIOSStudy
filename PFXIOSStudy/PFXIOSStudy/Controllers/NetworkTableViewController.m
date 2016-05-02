@@ -25,7 +25,6 @@
     NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/kr/rss/newfreeapplications/limit=100/genre=6014/xml"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSLog(@"error : %@", error);
         if (error != nil)
         {
             return;
