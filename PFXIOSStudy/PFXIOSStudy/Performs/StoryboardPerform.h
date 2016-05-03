@@ -18,5 +18,6 @@
 + (UIStoryboard *)sharedDispatchStoryBoard;
 + (UIStoryboard *)sharedDesignPatternStoryBoard;
 + (UIStoryboard *)sharedNetworkStoryBoard;
++ (UIStoryboard *)sharedSerializeStoryBoard;
 
 @end

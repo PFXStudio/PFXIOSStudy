@@ -1,58 +1,36 @@
 //
-//  NetworkTableViewController.m
+//  SerializeTableViewController.m
 //  PFXIOSStudy
 //
-//  Created by succorer on 2016. 4. 27..
+//  Created by succorer on 2016. 5. 3..
 //  Copyright © 2016년 PFXStudio. All rights reserved.
 //
 
-#import "NetworkTableViewController.h"
-#import "AppListParser.h"
+#import "SerializeTableViewController.h"
 
-@interface NetworkTableViewController () <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface SerializeTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
-@property (strong, nonatomic) NSArray *appDatas;
+@property (strong, nonatomic) NSMutableArray *appDatas;
 
 @end
 
-@implementation NetworkTableViewController
+@implementation SerializeTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.appDatas = [NSArray array];
     
-    NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/kr/rss/newfreeapplications/limit=100/genre=6014/xml"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error != nil)
-        {
-            return;
-        }
-        
-        [[AppListParser new] parseWithData:data completion:^(NSArray *appDatas, NSError *error) {
-            if (error != nil)
-            {
-                return;
-            }
-            
-            self.appDatas = appDatas;
-            [self.tableView reloadData];
-        }];
-        
-    }] resume];
-    
-//
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.appDatas = [NSMutableArray array];
+    
     CodeMenuViewController *codeMenuViewController = [[CodeMenuViewController alloc] initWithNibName:NSStringFromClass([CodeMenuViewController class]) bundle:[NSBundle mainBundle]];
-    [codeMenuViewController initWithSender:self.navigationController parentView:self.containerView path:@"Controllers/NetworkTableViewController.m"];
+    [codeMenuViewController initWithSender:self.navigationController parentView:self.containerView path:@"Controllers/SerializeTableViewController.m"];
     [self addChildViewController:codeMenuViewController];
 }
 
@@ -73,37 +51,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+
     AppData *appData = [self.appDatas objectAtIndex:indexPath.row];
     [cell.textLabel setText:appData.title];
-    [cell.detailTextLabel setText:appData.artist];
-    [cell.imageView setAlpha:0];
-    NSString *imageKey = [appData imageKeyWithIndex:0];
-    UIImage *image = [[ImagePerform sharedImagePerform] loadWithName:imageKey];
-    if (image != nil)
-    {
-        [cell.imageView setImage:image];
-        [cell.imageView setAlpha:1];
-        return cell;
-    }
-    
-    __weak typeof(UITableViewCell *) weakCell = cell;
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[appData.imagePaths firstObject]]];
-    [weakCell.imageView setImageWithURLRequest:request placeholderImage:[UIImage imageNamed:@"iconAlert"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        if (image == nil)
-        {
-            return;
-        }
-        
-        [[ImagePerform sharedImagePerform] saveWithName:imageKey image:image];
-        [weakCell.imageView setImage:image];
-        [UIView animateWithDuration:0.5 animations:^{
-            [weakCell.imageView setAlpha:1];
-        }];
-        
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        NSLog(@"error %@", error);
-    }];
-    // Configure the cell...
     
     return cell;
 }

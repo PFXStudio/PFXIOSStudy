@@ -13,6 +13,7 @@
 #import "DispatchViewController.h"
 #import "DesignPatternViewController.h"
 #import "NetworkTableViewController.h"
+#import "SerializeTableViewController.h"
 
 @interface MenuTableViewController ()
 
@@ -107,7 +108,14 @@
         
         return;
     }
-    
+
+    if (indexPath.row == MenuType_Serialize)
+    {
+        SerializeTableViewController *serializeTableViewController = [[StoryboardPerform sharedSerializeStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([SerializeTableViewController class])];
+        [self.navigationController pushViewController:serializeTableViewController animated:YES];
+        
+        return;
+    }
 }
 
 /*

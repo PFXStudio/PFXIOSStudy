@@ -51,6 +51,8 @@
 		D26708461CCDC7BE003253EA /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708451CCDC7BE003253EA /* ContainerViewController.m */; };
 		D26708491CCDC817003253EA /* SwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708481CCDC817003253EA /* SwapViewController.m */; };
 		D26708621CCE0950003253EA /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708611CCE0950003253EA /* EmptySegue.m */; };
+		D2C513201CD8A12800479B0A /* SerializeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C5131F1CD8A12800479B0A /* SerializeTableViewController.m */; };
+		D2C513221CD8A15600479B0A /* Serialize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C513211CD8A15600479B0A /* Serialize.storyboard */; };
 		D2EDC7591CCF10860091E435 /* DesignPatternTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7581CCF10860091E435 /* DesignPatternTests.m */; };
 		D2EDC7651CCF11860091E435 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7641CCF11860091E435 /* Singleton.m */; };
 		D2EDC7681CCF129B0091E435 /* Prototype.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7671CCF129B0091E435 /* Prototype.m */; };
@@ -172,6 +174,9 @@
 		D26708481CCDC817003253EA /* SwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwapViewController.m; path = Controllers/SwapViewController.m; sourceTree = "<group>"; };
 		D26708601CCE0950003253EA /* EmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmptySegue.h; path = Commons/EmptySegue.h; sourceTree = "<group>"; };
 		D26708611CCE0950003253EA /* EmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptySegue.m; path = Commons/EmptySegue.m; sourceTree = "<group>"; };
+		D2C5131E1CD8A12800479B0A /* SerializeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SerializeTableViewController.h; path = Controllers/SerializeTableViewController.h; sourceTree = "<group>"; };
+		D2C5131F1CD8A12800479B0A /* SerializeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SerializeTableViewController.m; path = Controllers/SerializeTableViewController.m; sourceTree = "<group>"; };
+		D2C513211CD8A15600479B0A /* Serialize.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Serialize.storyboard; path = Storyboards/Serialize.storyboard; sourceTree = "<group>"; };
 		D2EDC7561CCF10860091E435 /* DesignPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EDC7581CCF10860091E435 /* DesignPatternTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignPatternTests.m; sourceTree = "<group>"; };
 		D2EDC75A1CCF10860091E435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -388,6 +393,8 @@
 				D2F7266A1CD06A100005BFB0 /* DesignPatternViewController.m */,
 				D2F7266C1CD06EBA0005BFB0 /* NetworkTableViewController.h */,
 				D2F7266D1CD06EBA0005BFB0 /* NetworkTableViewController.m */,
+				D2C5131E1CD8A12800479B0A /* SerializeTableViewController.h */,
+				D2C5131F1CD8A12800479B0A /* SerializeTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -404,6 +411,7 @@
 				6DE61DDE1CCAEDE500C21880 /* Web.storyboard */,
 				D2F726671CD069B00005BFB0 /* DesignPattern.storyboard */,
 				D23EABCD1CD0B2C40057728C /* Network.storyboard */,
+				D2C513211CD8A15600479B0A /* Serialize.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -638,6 +646,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C513221CD8A15600479B0A /* Serialize.storyboard in Resources */,
 				D20A8F191CC9CA8500496121 /* Study.plist in Resources */,
 				D2F726681CD069B00005BFB0 /* DesignPattern.storyboard in Resources */,
 				D20A8F111CC9CA3800496121 /* CoreData.storyboard in Resources */,
@@ -705,6 +714,7 @@
 				D2EDC7B61CCF5FC20091E435 /* RunStatus.m in Sources */,
 				D2F726541CD064CF0005BFB0 /* IceSkill.m in Sources */,
 				D2EDC7681CCF129B0091E435 /* Prototype.m in Sources */,
+				D2C513201CD8A12800479B0A /* SerializeTableViewController.m in Sources */,
 				6DC752261CD798C700802CE0 /* AFURLResponseSerialization.m in Sources */,
 				D2F726511CD064C00005BFB0 /* FireSkill.m in Sources */,
 				D2F7264B1CD0608F0005BFB0 /* Quest10002.m in Sources */,

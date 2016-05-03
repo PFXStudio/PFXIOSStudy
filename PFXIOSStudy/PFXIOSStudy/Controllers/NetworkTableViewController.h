@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NetworkTableViewController : UITableViewController
+@interface NetworkTableViewController : UIViewController
 
 @end

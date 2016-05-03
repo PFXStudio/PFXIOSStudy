@@ -131,6 +131,14 @@
         self.appData.uniqueKey = uniqueKey;
         return;
     }
+    
+    if ([elementName isEqualToString:@"link"] == YES)
+    {
+        NSString *link = [attributeDict objectForKey:@"href"];
+        self.appData.link = link;
+        
+        return;
+    }
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser

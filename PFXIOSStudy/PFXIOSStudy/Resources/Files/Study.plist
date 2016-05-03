@@ -7,8 +7,7 @@
 	<string>Block</string>
 	<string>Dispatch</string>
 	<string>DesignPattern</string>
-	<string>Network</string>
-	<string>AFNetwork</string>
+	<string>Network &amp; AFNetwork</string>
 	<string>Serialize</string>
 </array>
 </plist>

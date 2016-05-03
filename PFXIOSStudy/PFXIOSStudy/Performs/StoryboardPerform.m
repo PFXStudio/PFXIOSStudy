@@ -58,4 +58,10 @@
     return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
 }
 
++ (UIStoryboard *)sharedSerializeStoryBoard
+{
+    NSString * storyboardName = @"Serialize";
+    return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+}
+
 @end

@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString *uniqueKey;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *artist;
+@property (strong, nonatomic) NSString *link;
 @property (strong, nonatomic) NSMutableArray *imagePaths;
 
 - (NSString *)imageKeyWithIndex:(NSInteger)index;
