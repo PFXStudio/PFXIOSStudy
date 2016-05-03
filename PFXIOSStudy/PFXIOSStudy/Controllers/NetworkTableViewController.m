@@ -70,30 +70,32 @@
     AppData *appData = [self.appDatas objectAtIndex:indexPath.row];
     [cell.textLabel setText:appData.title];
     [cell.detailTextLabel setText:appData.artist];
-    
-#error TODO : 
-    NSString *imagePath = [appData.imagePaths firstObject];
-    UIImage *image = [[ImagePerform sharedImagePerform] loadWithName:[imagePath lastPathComponent]];
+    [cell.imageView setAlpha:0];
+    NSString *imageKey = [appData imageKeyWithIndex:0];
+    UIImage *image = [[ImagePerform sharedImagePerform] loadWithName:imageKey];
     if (image != nil)
     {
         [cell.imageView setImage:image];
+        [cell.imageView setAlpha:1];
         return cell;
     }
     
     __weak typeof(UITableViewCell *) weakCell = cell;
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:imagePath]];
-    UIImageView *imageView = [UIImageView new];
-    [imageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[appData.imagePaths firstObject]]];
+    [weakCell.imageView setImageWithURLRequest:request placeholderImage:[UIImage imageNamed:@"iconAlert"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         if (image == nil)
         {
             return;
         }
         
-        [[ImagePerform sharedImagePerform] saveWithName:[imagePath lastPathComponent] image:image];
+        [[ImagePerform sharedImagePerform] saveWithName:imageKey image:image];
         [weakCell.imageView setImage:image];
+        [UIView animateWithDuration:0.5 animations:^{
+            [weakCell.imageView setAlpha:1];
+        }];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        
+        NSLog(@"error %@", error);
     }];
     // Configure the cell...
     

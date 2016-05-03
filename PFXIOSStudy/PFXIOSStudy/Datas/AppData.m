@@ -25,7 +25,19 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"title : %@\nartist : %@\nimagePaths : %@", self.title, self.artist, self.imagePaths];
+    return [NSString stringWithFormat:@"uniqueKey : %@\ntitle : %@\nartist : %@\nimagePaths : %@", self.uniqueKey, self.title, self.artist, self.imagePaths];
+}
+
+- (NSString *)imageKeyWithIndex:(NSInteger)index
+{
+    if (index >= [self.imagePaths count])
+    {
+        return nil;
+    }
+
+    NSString *imagePath = [self.imagePaths objectAtIndex:index];
+    NSString *lastPath = [imagePath lastPathComponent];
+    return [NSString stringWithFormat:@"%@-%@", self.uniqueKey, lastPath];
 }
 
 @end

@@ -124,6 +124,13 @@
         self.appData = [AppData new];
         return;
     }
+    
+    if ([elementName isEqualToString:@"id"] == YES)
+    {
+        NSString *uniqueKey = [attributeDict objectForKey:@"im:id"];
+        self.appData.uniqueKey = uniqueKey;
+        return;
+    }
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
@@ -164,7 +171,6 @@
     if ([elementName isEqualToString:@"entry"] == YES)
     {
         [self.appDatas addObject:self.appData];
-        NSLog(@"%@", [self.appData description]);
         return;
     }
 }
