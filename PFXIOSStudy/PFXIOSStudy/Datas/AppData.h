@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AppData : NSObject
+@interface AppData : NSObject <NSCoding>
 
 @property (strong, nonatomic) NSString *uniqueKey;
 @property (strong, nonatomic) NSString *title;

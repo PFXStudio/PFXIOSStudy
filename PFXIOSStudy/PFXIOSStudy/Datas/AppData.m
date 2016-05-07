@@ -40,4 +40,25 @@
     return [NSString stringWithFormat:@"%@-%@", self.uniqueKey, lastPath];
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    self.uniqueKey = [aDecoder decodeObjectForKey:@"uniqueKey"];
+    self.title = [aDecoder decodeObjectForKey:@"title"];
+    self.artist = [aDecoder decodeObjectForKey:@"artist"];
+    self.link = [aDecoder decodeObjectForKey:@"link"];
+    self.imagePaths = [aDecoder decodeObjectForKey:@"imagePaths"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.uniqueKey forKey:@"uniqueKey"];
+    [aCoder encodeObject:self.title forKey:@"title"];
+    [aCoder encodeObject:self.artist forKey:@"artist"];
+    [aCoder encodeObject:self.link forKey:@"link"];
+    [aCoder encodeObject:self.imagePaths forKey:@"imagePaths"];
+}
+
 @end

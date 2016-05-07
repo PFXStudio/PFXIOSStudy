@@ -11,6 +11,7 @@
 @interface DesignPatternViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UIView *classContainerView;
 
 @end
 
@@ -22,6 +23,10 @@
     CodeMenuViewController *codeMenuViewController = [[CodeMenuViewController alloc] initWithNibName:NSStringFromClass([CodeMenuViewController class]) bundle:[NSBundle mainBundle]];
     [codeMenuViewController initWithSender:self.navigationController parentView:self.containerView path:@"../DesignPatternTests/DesignPatternTests.m"];
     [self addChildViewController:codeMenuViewController];
+    
+    CodeMenuViewController *codeMenuViewController1 = [[CodeMenuViewController alloc] initWithNibName:NSStringFromClass([CodeMenuViewController class]) bundle:[NSBundle mainBundle]];
+    [codeMenuViewController1 initWithSender:self.navigationController parentView:self.classContainerView path:@"DesignPatterns/"];
+    [self addChildViewController:codeMenuViewController1];
 }
 
 - (void)didReceiveMemoryWarning {

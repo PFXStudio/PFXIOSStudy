@@ -375,26 +375,26 @@
 		D20A8F061CC9C83B00496121 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D20A8F071CC9C85C00496121 /* CoreDataTableViewController.h */,
-				D20A8F081CC9C85C00496121 /* CoreDataTableViewController.m */,
-				D20A8F0A1CC9C87600496121 /* MenuTableViewController.h */,
-				D20A8F0B1CC9C87600496121 /* MenuTableViewController.m */,
+				6D4E36F31CCE3595009FD201 /* BlockViewController.h */,
+				6D4E36F41CCE3595009FD201 /* BlockViewController.m */,
 				6DE61DE51CCAEFFC00C21880 /* CodeViewController.h */,
 				6DE61DE61CCAEFFC00C21880 /* CodeViewController.m */,
 				D26708441CCDC7BE003253EA /* ContainerViewController.h */,
 				D26708451CCDC7BE003253EA /* ContainerViewController.m */,
-				D26708471CCDC817003253EA /* SwapViewController.h */,
-				D26708481CCDC817003253EA /* SwapViewController.m */,
-				6D4E36F31CCE3595009FD201 /* BlockViewController.h */,
-				6D4E36F41CCE3595009FD201 /* BlockViewController.m */,
-				6D4E36F81CCE3BBD009FD201 /* DispatchViewController.h */,
-				6D4E36F91CCE3BBD009FD201 /* DispatchViewController.m */,
+				D20A8F071CC9C85C00496121 /* CoreDataTableViewController.h */,
+				D20A8F081CC9C85C00496121 /* CoreDataTableViewController.m */,
 				D2F726691CD06A100005BFB0 /* DesignPatternViewController.h */,
 				D2F7266A1CD06A100005BFB0 /* DesignPatternViewController.m */,
+				6D4E36F81CCE3BBD009FD201 /* DispatchViewController.h */,
+				6D4E36F91CCE3BBD009FD201 /* DispatchViewController.m */,
+				D20A8F0A1CC9C87600496121 /* MenuTableViewController.h */,
+				D20A8F0B1CC9C87600496121 /* MenuTableViewController.m */,
 				D2F7266C1CD06EBA0005BFB0 /* NetworkTableViewController.h */,
 				D2F7266D1CD06EBA0005BFB0 /* NetworkTableViewController.m */,
 				D2C5131E1CD8A12800479B0A /* SerializeTableViewController.h */,
 				D2C5131F1CD8A12800479B0A /* SerializeTableViewController.m */,
+				D26708471CCDC817003253EA /* SwapViewController.h */,
+				D26708481CCDC817003253EA /* SwapViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
