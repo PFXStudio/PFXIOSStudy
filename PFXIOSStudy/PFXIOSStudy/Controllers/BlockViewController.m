@@ -10,10 +10,7 @@
 
 @interface BlockViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
-@property (weak, nonatomic) IBOutlet UIButton *requestButton;
-@property (strong, nonatomic) void(^completionBlock)(NSString *appStoreVersion, NSError *error);
 
 @end
 
@@ -42,54 +39,83 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)touchedRequestButton:(id)sender {
-    [self.requestButton setEnabled:NO];
-    [self.textView setText:@""];
-    
-    __weak typeof(self) weakSelf = self;
-    [self requestWithCompletion:^(NSString *appStoreVersion, NSError *error) {
-        [weakSelf.requestButton setEnabled:YES];
+- (IBAction)touchedMainQueueRequestButton:(id)sender {
+    [self mainQueueRequestWithCompletion:^(NSString *appStoreVersion, NSError *error) {
         if (error != nil)
         {
             NSLog(@"%@", error);
             return;
         }
         
-        [weakSelf.textView setText:appStoreVersion];
-        NSLog(@"AppStoreVersion %@", appStoreVersion);
+        NSLog(@"mainQueueRequestWithCompletion %@\n", appStoreVersion);
     }];
+}
+
+- (IBAction)touchedGlobalQueueRequestButton:(id)sender {
+    [self backgroundRequestWithCompletion:^(NSString *appStoreVersion, NSError *error) {
+        if (error != nil)
+        {
+            NSLog(@"%@", error);
+            return;
+        }
+        
+        NSLog(@"backgroundRequestWithCompletion %@\n", appStoreVersion);
+    }];
+}
+
+- (IBAction)touchedCheckLockButton:(id)sender {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 - (void)requestWithCompletion:(void(^)(NSString *appStoreVersion, NSError *error))completion
 {
-    self.completionBlock = completion;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/lookup?bundleId=com.pfxstudio.HoneyRoom"]];
-        NSData* data = [NSData dataWithContentsOfURL:url];
-        NSDictionary* lookup = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        if ([lookup[@"resultCount"] integerValue] == 1)
-        {
-            NSString* appStoreVersion = lookup[@"results"][0][@"version"];
-            
-            if (completion == nil)
-            {
-                return;
-            }
-            
-            completion(appStoreVersion, nil);
-            return;
-        }
+    NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/lookup?bundleId=com.pfxstudio.HoneyRoom"]];
+    NSData* data = [NSData dataWithContentsOfURL:url];
+    NSDictionary* lookup = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    if ([lookup[@"resultCount"] integerValue] == 1)
+    {
+        NSString* appStoreVersion = lookup[@"results"][0][@"version"];
         
         if (completion == nil)
         {
             return;
         }
         
-        NSError *error = [NSError errorWithDomain:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__] code:ErrorType_AppStoreVersion userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"ErrorType_AppStoreVersion", @"errorType", nil]];
-        completion(nil, error);
+        completion(appStoreVersion, nil);
+        return;
+    }
+    
+    if (completion == nil)
+    {
+        return;
+    }
+    
+    NSError *error = [NSError errorWithDomain:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__] code:ErrorType_AppStoreVersion userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"ErrorType_AppStoreVersion", @"errorType", nil]];
+    completion(nil, error);
+}
+
+- (void)mainQueueRequestWithCompletion:(void(^)(NSString *appStoreVersion, NSError *error))completion
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (int i = 0; i < 10000; i++)
+        {
+            NSLog(@"mainQueue %d", i);
+        }
+
+        [self requestWithCompletion:completion];
     });
 }
 
+- (void)backgroundRequestWithCompletion:(void(^)(NSString *appStoreVersion, NSError *error))completion
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        for (int i = 0; i < 10000; i++)
+        {
+            NSLog(@"backgroundQueue %d", i);
+        }
+
+        [self requestWithCompletion:completion];
+    });
+}
 
 @end
