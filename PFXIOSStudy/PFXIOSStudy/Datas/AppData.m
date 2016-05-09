@@ -23,6 +23,18 @@
     return self;
 }
 
++ (instancetype)appDataWithUniqueKey:(NSString *)uniqueKey title:(NSString *)title artist:(NSString *)artist link:(NSString *)link imagePaths:(NSArray *)imagePaths
+{
+    AppData *appData = [AppData new];
+    appData.uniqueKey = uniqueKey;
+    appData.title = title;
+    appData.artist = artist;
+    appData.link = link;
+    appData.imagePaths = [NSMutableArray arrayWithArray:imagePaths];
+    
+    return appData;
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"uniqueKey : %@\ntitle : %@\nartist : %@\nimagePaths : %@", self.uniqueKey, self.title, self.artist, self.imagePaths];

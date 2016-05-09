@@ -86,7 +86,13 @@
                             <constraint firstAttribute="trailing" secondItem="Uz0-mt-98T" secondAttribute="trailing" id="wq4-0C-gfh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9ID-uM-a68"/>
+                    <navigationItem key="navigationItem" id="9ID-uM-a68">
+                        <barButtonItem key="rightBarButtonItem" title="Serialize" id="9Pt-3z-yCv">
+                            <connections>
+                                <action selector="touchedSerializeButton:" destination="n17-YY-LjB" id="QSd-4J-BKJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="Uz0-mt-98T" id="Ik2-MX-LA3"/>
                         <outlet property="tableView" destination="NlE-HM-n3A" id="ljg-rP-vMi"/>

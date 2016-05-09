@@ -16,6 +16,8 @@
 @property (strong, nonatomic) NSString *link;
 @property (strong, nonatomic) NSMutableArray *imagePaths;
 
++ (instancetype)appDataWithUniqueKey:(NSString *)uniqueKey title:(NSString *)title artist:(NSString *)artist link:(NSString *)link imagePaths:(NSArray *)imagePaths;
+
 - (NSString *)imageKeyWithIndex:(NSInteger)index;
 
 @end
