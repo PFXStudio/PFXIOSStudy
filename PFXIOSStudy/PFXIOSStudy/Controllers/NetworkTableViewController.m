@@ -17,6 +17,17 @@
 
 @end
 
+/*
+ 네트워크 연동 테스트
+ NSURLConnection 객체를 활용하여 네트워크 연동을 하였었는데 
+ iOS7 부터 NSURLSession 객체가 추가 되었다
+ 업로드, 다운로드를 백그라운드로 할 수 있다고 보았는데 영어 실력 부족으로 조금 더 알아보고 보완하겠다
+ 이 예제는 앱 목록을 애플 스토어에서 받아와 화면에 보여주는 예제이다
+ 
+ AFNetworking 오픈소스는 네트워크 연동을 보다 쉽게 구현 해 놓은 오픈소스이다
+ 이 오픈소스를 한번 사용한 이후부터 이 오픈소스만 사용하게 되었다 매우 잘된다
+ 이 예제는 앱 아이콘 이미지를 서버로부터 받아와 화면에 보여주는 예제이다
+*/
 @implementation NetworkTableViewController
 
 - (void)viewDidLoad {
@@ -24,7 +35,9 @@
 
     self.appDatas = [NSArray array];
     
-    NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/kr/rss/newfreeapplications/limit=100/genre=6014/xml"];
+    NSString *urlPath = @"https://itunes.apple.com/kr/rss/newfreeapplications/limit=100/genre=6014/xml?한글=이쁘다";
+    // 네트워크 통신 시 인코딩을 해줘야 정상적으로 동작한다. 위 경로의 한글=이쁘다는 인코딩 테스트를 하기 위해 작성 하였음
+    NSURL *url = [[NSURL alloc] initWithDataRepresentation:[urlPath dataUsingEncoding:NSUTF8StringEncoding] relativeToURL:nil];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error != nil)
@@ -39,7 +52,7 @@
             }
             
             self.appDatas = appDatas;
-            [self.tableView reloadData];
+            [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
         }];
         
     }] resume];

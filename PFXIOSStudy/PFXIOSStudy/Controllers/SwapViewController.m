@@ -17,6 +17,13 @@
 
 @end
 
+/* ContainerView 활용하기
+ iOS5 부터 containerview가 추가가 되었다.
+ containerview 영역에 다른 화면을 바꿔치기 할 때 유용하게 쓸 수 있다
+ 반드시 segue 값이 설정 되어 있어야 구분 할 수 있다
+ 이 예제는 firstViewController 화면과 secondViewController 화면을 번갈아 보여주는 예제이다
+*/
+
 @implementation SwapViewController
 
 - (void)viewDidLoad {
