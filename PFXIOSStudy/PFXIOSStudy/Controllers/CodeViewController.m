@@ -15,6 +15,9 @@
 
 @end
 
+/*
+ Github에 있는 코드를 보여주는 콘트롤러
+*/
 @implementation CodeViewController
 
 - (void)viewDidLoad {

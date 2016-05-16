@@ -33,6 +33,7 @@
 
 @implementation DesignPatternTests
 
+// 프로토타입 패턴
 - (void)testPrototype
 {
     Prototype *prototype1 = [Prototype protoTypeWithName:@"PARK" age:@"10"];
@@ -50,6 +51,7 @@
     NSLog(@"%@", [prototype3 description]);
 }
 
+// 프록시 패턴
 - (void)testProxy
 {
     Monster *monster = [Monster new];
@@ -59,6 +61,7 @@
     [proxy defence];
 }
 
+// 퍼사드 패턴
 - (void)testFacade
 {
     Facade *facade = [Facade new];
@@ -66,11 +69,13 @@
     [facade defence];
 }
 
+// 싱글톤 패턴
 - (void)testSingleton
 {
     [Singleton sharedSingleton];
 }
 
+// 빌더 패턴
 - (void)testBuilder
 {
     MonsterBuilder *monsterBuilder = [MonsterBuilder new];
@@ -83,6 +88,7 @@
     [builder buildObject];
 }
 
+// 템플릿 메소드 패턴
 - (void)testTemplateMethod
 {
     Monster *archerMonster = [ArcherMonster new];
@@ -92,6 +98,7 @@
     [knightMonster attack];
 }
 
+// 스테이트 패턴
 - (void)testState
 {
     Monster *archerMonster = [ArcherMonster new];
@@ -105,6 +112,7 @@
     [knightMonster run];
 }
 
+// 스트레이티지 패턴
 - (void)testStrategy
 {
     Quest *quest = [Quest10001 new];
@@ -114,6 +122,7 @@
     NSLog(@"%@", [quest conditionInfo]);
 }
 
+// 앱스트랙트 팩토리 패턴
 - (void)testAbstractFactory
 {
     Player *player = [Player new];
@@ -127,6 +136,7 @@
     [player.skill learnSkill];
 }
 
+// 팩토리 패턴
 - (void)testFactory
 {
     Quest *

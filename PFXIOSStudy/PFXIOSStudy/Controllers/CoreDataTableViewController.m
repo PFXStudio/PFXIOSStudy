@@ -20,6 +20,12 @@
 
 @end
 
+/*
+ CoreData를 활용한 예제 코드
+ CoreData는 로컬 데이터베이스를 쉽게 구성해 주는 도구로 생각하면 된다
+ 이 예제는 CoreData 삽입, 삭제, 목록을 다루는 코드이며 NSFetchedResultsController 사용 예제도 포함되어 있다
+ 
+*/
 @implementation CoreDataTableViewController
 
 - (void)viewDidLoad {
@@ -91,6 +97,7 @@
     NSInteger count = [[NSDate date] timeIntervalSince1970];
     NSNumber *value = [NSNumber numberWithInteger:count];
     
+    // CoreData 삽입 코드
     NSManagedObjectContext *context = [[CoreDataManager sharedCoreDataManager] testEntityContext];
     NSManagedObject *entityObject = [NSEntityDescription insertNewObjectForEntityForName:self.entityName inManagedObjectContext:context];
     [entityObject setValue:value forKey:@"value"];
@@ -115,6 +122,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        // CoreData 삭제 코드
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
         
@@ -139,6 +147,7 @@
         return _fetchedResultsController;
     }
     
+    // CoreData 목록 코드
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
     NSManagedObjectContext *context = [[CoreDataManager sharedCoreDataManager] testEntityContext];

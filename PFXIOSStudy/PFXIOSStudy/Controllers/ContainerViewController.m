@@ -18,6 +18,11 @@
 
 @end
 
+/*
+ ContainerView Swap 예제 코드
+ 주요 코드는 SwapViewController를 참조하기 바란다
+*/
+
 @implementation ContainerViewController
 
 - (void)viewDidLoad {

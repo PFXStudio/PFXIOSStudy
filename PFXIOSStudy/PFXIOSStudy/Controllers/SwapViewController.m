@@ -107,6 +107,7 @@
 {
     self.completionBlock = completion;
     self.currentSegueIdentifier = ([self.currentSegueIdentifier  isEqual: kFirstIdentifier]) ? kSecondIdentifier : kFirstIdentifier;
+    // UIStoryboardSegue를 활용한 코드
     [self performSegueWithIdentifier:self.currentSegueIdentifier sender:nil];
 }
 

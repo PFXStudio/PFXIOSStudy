@@ -39,6 +39,7 @@
     // 네트워크 통신 시 인코딩을 해줘야 정상적으로 동작한다. 위 경로의 한글=이쁘다는 인코딩 테스트를 하기 위해 작성 하였음
     NSURL *url = [[NSURL alloc] initWithDataRepresentation:[urlPath dataUsingEncoding:NSUTF8StringEncoding] relativeToURL:nil];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    // 요청을 하면 해당 서버로 부터 정보를 받아온다, error는 성공이면 nil이고 실패면 정보가 담겨 온다
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error != nil)
         {
@@ -56,13 +57,6 @@
         }];
         
     }] resume];
-    
-//
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     CodeMenuViewController *codeMenuViewController = [[CodeMenuViewController alloc] initWithNibName:NSStringFromClass([CodeMenuViewController class]) bundle:[NSBundle mainBundle]];
     [codeMenuViewController initWithSender:self.navigationController parentView:self.containerView path:@"Controllers/NetworkTableViewController.m"];
@@ -99,6 +93,8 @@
         return cell;
     }
     
+    // UIImageView (AFNetworking) 이미지 다운로드 기능 사용 예제이다
+    // 이미지 뷰가 메모리 해제 될 수도 있으니 __weak 키워드를 사용하여 약한 참조를 해야 안정적이다
     __weak typeof(UITableViewCell *) weakCell = cell;
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[appData.imagePaths firstObject]]];
     [weakCell.imageView setImageWithURLRequest:request placeholderImage:[UIImage imageNamed:@"iconAlert"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
@@ -120,49 +116,5 @@
     
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

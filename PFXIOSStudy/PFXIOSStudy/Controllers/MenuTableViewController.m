@@ -20,7 +20,9 @@
 @property (strong, nonatomic) NSArray *studies;
 
 @end
-
+/*
+ 메뉴 선택 화면
+*/
 @implementation MenuTableViewController
 
 - (void)viewDidLoad {

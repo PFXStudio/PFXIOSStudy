@@ -15,6 +15,10 @@
 
 @end
 
+/*
+ 디자인패턴 예제 코드이다
+ 디자인패턴 실제 코드는 DesignPatternTests.m 파일을 확인하기 바란다
+*/
 @implementation DesignPatternViewController
 
 - (void)viewDidLoad {
