@@ -53,6 +53,11 @@
 		D26708621CCE0950003253EA /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D26708611CCE0950003253EA /* EmptySegue.m */; };
 		D2C513201CD8A12800479B0A /* SerializeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C5131F1CD8A12800479B0A /* SerializeTableViewController.m */; };
 		D2C513221CD8A15600479B0A /* Serialize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C513211CD8A15600479B0A /* Serialize.storyboard */; };
+		D2E45FCD1F7CD00B0038A80C /* CodeTipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E45FCB1F7CD00B0038A80C /* CodeTipViewController.m */; };
+		D2E45FCF1F7CD0440038A80C /* CodeTip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E45FCE1F7CD0440038A80C /* CodeTip.storyboard */; };
+		D2E45FD11F7CDBC20038A80C /* Algorithm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E45FD01F7CDBC20038A80C /* Algorithm.storyboard */; };
+		D2E45FD41F7CDC6C0038A80C /* AlgorithmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E45FD31F7CDC6C0038A80C /* AlgorithmTableViewController.m */; };
+		D2E45FD71F7CEB190038A80C /* DepthFirstSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E45FD61F7CEB190038A80C /* DepthFirstSearchViewController.m */; };
 		D2EDC7591CCF10860091E435 /* DesignPatternTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7581CCF10860091E435 /* DesignPatternTests.m */; };
 		D2EDC7651CCF11860091E435 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7641CCF11860091E435 /* Singleton.m */; };
 		D2EDC7681CCF129B0091E435 /* Prototype.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDC7671CCF129B0091E435 /* Prototype.m */; };
@@ -177,6 +182,14 @@
 		D2C5131E1CD8A12800479B0A /* SerializeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SerializeTableViewController.h; path = Controllers/SerializeTableViewController.h; sourceTree = "<group>"; };
 		D2C5131F1CD8A12800479B0A /* SerializeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SerializeTableViewController.m; path = Controllers/SerializeTableViewController.m; sourceTree = "<group>"; };
 		D2C513211CD8A15600479B0A /* Serialize.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Serialize.storyboard; path = Storyboards/Serialize.storyboard; sourceTree = "<group>"; };
+		D2E45FCB1F7CD00B0038A80C /* CodeTipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CodeTipViewController.m; path = Controllers/CodeTipViewController.m; sourceTree = "<group>"; };
+		D2E45FCC1F7CD00B0038A80C /* CodeTipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CodeTipViewController.h; path = Controllers/CodeTipViewController.h; sourceTree = "<group>"; };
+		D2E45FCE1F7CD0440038A80C /* CodeTip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CodeTip.storyboard; path = Storyboards/CodeTip.storyboard; sourceTree = "<group>"; };
+		D2E45FD01F7CDBC20038A80C /* Algorithm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Algorithm.storyboard; path = Storyboards/Algorithm.storyboard; sourceTree = "<group>"; };
+		D2E45FD21F7CDC6C0038A80C /* AlgorithmTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AlgorithmTableViewController.h; path = Controllers/AlgorithmTableViewController.h; sourceTree = "<group>"; };
+		D2E45FD31F7CDC6C0038A80C /* AlgorithmTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AlgorithmTableViewController.m; path = Controllers/AlgorithmTableViewController.m; sourceTree = "<group>"; };
+		D2E45FD51F7CEB190038A80C /* DepthFirstSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DepthFirstSearchViewController.h; path = Controllers/DepthFirstSearchViewController.h; sourceTree = "<group>"; };
+		D2E45FD61F7CEB190038A80C /* DepthFirstSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DepthFirstSearchViewController.m; path = Controllers/DepthFirstSearchViewController.m; sourceTree = "<group>"; };
 		D2EDC7561CCF10860091E435 /* DesignPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EDC7581CCF10860091E435 /* DesignPatternTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignPatternTests.m; sourceTree = "<group>"; };
 		D2EDC75A1CCF10860091E435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -377,6 +390,8 @@
 			children = (
 				6D4E36F31CCE3595009FD201 /* BlockViewController.h */,
 				6D4E36F41CCE3595009FD201 /* BlockViewController.m */,
+				D2E45FCC1F7CD00B0038A80C /* CodeTipViewController.h */,
+				D2E45FCB1F7CD00B0038A80C /* CodeTipViewController.m */,
 				6DE61DE51CCAEFFC00C21880 /* CodeViewController.h */,
 				6DE61DE61CCAEFFC00C21880 /* CodeViewController.m */,
 				D26708441CCDC7BE003253EA /* ContainerViewController.h */,
@@ -395,6 +410,10 @@
 				D2C5131F1CD8A12800479B0A /* SerializeTableViewController.m */,
 				D26708471CCDC817003253EA /* SwapViewController.h */,
 				D26708481CCDC817003253EA /* SwapViewController.m */,
+				D2E45FD21F7CDC6C0038A80C /* AlgorithmTableViewController.h */,
+				D2E45FD31F7CDC6C0038A80C /* AlgorithmTableViewController.m */,
+				D2E45FD51F7CEB190038A80C /* DepthFirstSearchViewController.h */,
+				D2E45FD61F7CEB190038A80C /* DepthFirstSearchViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -412,6 +431,8 @@
 				D2F726671CD069B00005BFB0 /* DesignPattern.storyboard */,
 				D23EABCD1CD0B2C40057728C /* Network.storyboard */,
 				D2C513211CD8A15600479B0A /* Serialize.storyboard */,
+				D2E45FCE1F7CD0440038A80C /* CodeTip.storyboard */,
+				D2E45FD01F7CDBC20038A80C /* Algorithm.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -646,6 +667,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E45FD11F7CDBC20038A80C /* Algorithm.storyboard in Resources */,
 				D2C513221CD8A15600479B0A /* Serialize.storyboard in Resources */,
 				D20A8F191CC9CA8500496121 /* Study.plist in Resources */,
 				D2F726681CD069B00005BFB0 /* DesignPattern.storyboard in Resources */,
@@ -655,6 +677,7 @@
 				D20A8F0F1CC9C93000496121 /* Menu.storyboard in Resources */,
 				6D4E36F21CCE354C009FD201 /* Block.storyboard in Resources */,
 				D20A8F221CC9CB2D00496121 /* LaunchScreen.storyboard in Resources */,
+				D2E45FCF1F7CD0440038A80C /* CodeTip.storyboard in Resources */,
 				D20A8F1C1CC9CAB000496121 /* Assets.xcassets in Resources */,
 				6DE61DDF1CCAEDE500C21880 /* Web.storyboard in Resources */,
 				D26708421CCDC426003253EA /* Container.storyboard in Resources */,
@@ -686,6 +709,7 @@
 				6DEEDFD61CC8F8BA00343239 /* AppDelegate.m in Sources */,
 				D2F726481CD060840005BFB0 /* Quest10001.m in Sources */,
 				D2F726451CD060680005BFB0 /* Quest.m in Sources */,
+				D2E45FCD1F7CD00B0038A80C /* CodeTipViewController.m in Sources */,
 				6DC7521F1CD798C700802CE0 /* AFHTTPRequestOperation.m in Sources */,
 				D2F7265D1CD066100005BFB0 /* ArcherSkillFactory.m in Sources */,
 				D2EDC77B1CCF1BC80091E435 /* PlayerBuilder.m in Sources */,
@@ -701,6 +725,7 @@
 				6DC752091CD7957B00802CE0 /* ImagePerform.m in Sources */,
 				D2F726631CD067180005BFB0 /* Player.m in Sources */,
 				6DE61DEC1CCAF41000C21880 /* CodeMenuViewController.m in Sources */,
+				D2E45FD71F7CEB190038A80C /* DepthFirstSearchViewController.m in Sources */,
 				D20A8F201CC9CAE900496121 /* PFXIOSStudy.xcdatamodeld in Sources */,
 				D2EDC7651CCF11860091E435 /* Singleton.m in Sources */,
 				6DC752271CD798C700802CE0 /* AFURLSessionManager.m in Sources */,
@@ -714,6 +739,7 @@
 				D2EDC7B61CCF5FC20091E435 /* RunStatus.m in Sources */,
 				D2F726541CD064CF0005BFB0 /* IceSkill.m in Sources */,
 				D2EDC7681CCF129B0091E435 /* Prototype.m in Sources */,
+				D2E45FD41F7CDC6C0038A80C /* AlgorithmTableViewController.m in Sources */,
 				D2C513201CD8A12800479B0A /* SerializeTableViewController.m in Sources */,
 				6DC752261CD798C700802CE0 /* AFURLResponseSerialization.m in Sources */,
 				D2F726511CD064C00005BFB0 /* FireSkill.m in Sources */,

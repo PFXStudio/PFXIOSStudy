@@ -64,4 +64,15 @@
     return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
 }
 
++ (UIStoryboard *)sharedAlgorithmStoryBoard
+{
+    NSString * storyboardName = @"Algorithm";
+    return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+}
+
++ (UIStoryboard *)sharedCodeTipStoryBoard {
+    NSString * storyboardName = @"CodeTip";
+    return [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+}
+
 @end

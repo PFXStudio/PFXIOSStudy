@@ -19,5 +19,7 @@
 + (UIStoryboard *)sharedDesignPatternStoryBoard;
 + (UIStoryboard *)sharedNetworkStoryBoard;
 + (UIStoryboard *)sharedSerializeStoryBoard;
++ (UIStoryboard *)sharedAlgorithmStoryBoard;
++ (UIStoryboard *)sharedCodeTipStoryBoard;
 
 @end

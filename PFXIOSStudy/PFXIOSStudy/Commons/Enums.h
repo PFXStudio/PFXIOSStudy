@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger, MenuType)
     MenuType_DesignPattern,
     MenuType_Network,
     MenuType_Serialize,
+    MenuType_Algorithm,
+    MenuType_CodeTip,
     
     MenuType_Max,
 };

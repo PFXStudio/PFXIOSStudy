@@ -14,6 +14,8 @@
 #import "DesignPatternViewController.h"
 #import "NetworkTableViewController.h"
 #import "SerializeTableViewController.h"
+#import "AlgorithmTableViewController.h"
+#import "CodeTipViewController.h"
 
 @interface MenuTableViewController ()
 
@@ -117,6 +119,20 @@
         [self.navigationController pushViewController:serializeTableViewController animated:YES];
         
         return;
+    }
+    
+    if (indexPath.row == MenuType_Algorithm)
+    {
+        AlgorithmTableViewController *algorithmTableViewController = [[StoryboardPerform sharedAlgorithmStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([AlgorithmTableViewController class])];
+        [self.navigationController pushViewController:algorithmTableViewController animated:YES];
+        
+        return;
+    }
+    
+    if (indexPath.row == MenuType_CodeTip) {
+        CodeTipViewController *codeTipViewController = [[StoryboardPerform sharedCodeTipStoryBoard] instantiateViewControllerWithIdentifier:NSStringFromClass([CodeTipViewController class])];
+        
+        [self.navigationController pushViewController:codeTipViewController animated:YES];
     }
 }
 
